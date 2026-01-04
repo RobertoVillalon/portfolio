@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 @import "tailwindcss";
 @import "preline/variants.css";
 @source "../node_modules/preline/dist/*.js";
 @plugin "@iconify/tailwind4" {
  prefixes: tabler
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
 }

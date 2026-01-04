@@ -7,6 +7,7 @@ import { Component, input } from '@angular/core';
   styleUrl: './container.css',
 })
 export class Container {
-  isSidebarOpened = input<boolean>();
-  id = input<string>();
+  title = input.required<string>();
+  isSidebarOpened = input.required<boolean>();
+  id = input.required<string>();
 }

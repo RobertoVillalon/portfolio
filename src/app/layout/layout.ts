@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Sidebar } from "../components/sidebar/sidebar";
-import { PrincipalPage } from "../pages/principal-page/principal-page";
+import { Container } from "../components/container/container";
+import { AboutMe } from "../sections/about-me/about-me";
+import { Experience } from "../sections/experience/experience";
+import { Projects } from "../sections/projects/projects";
+import { Technologies } from "../sections/technologies/technologies";
+import { SidebarService } from '../service/sidebar-service';
 
 @Component({
   selector: 'layout',
-  imports: [Sidebar, PrincipalPage],
+  imports: [Sidebar, Container, AboutMe, Experience, Projects, Technologies],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })
 export class Layout {
-
+  private readonly sidebarService = inject(SidebarService);
+  isSidebarOpened = this.sidebarService.isOpened;
 
 }

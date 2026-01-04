@@ -1,2 +1,14 @@
 <sidebar />
-<app-principal-page />
+
+<container title="Acerca de Mi" [isSidebarOpened]="isSidebarOpened()" id="aboutme">
+    <app-about-me />
+</container>
+<container title="Experiencia Profesional" [isSidebarOpened]="isSidebarOpened()" id="experience">
+    <app-experience />
+</container>
+<container title="Proyectos Personales" [isSidebarOpened]="isSidebarOpened()" id="projects">
+    <app-projects />
+</container>
+<container title="Tecnologias" [isSidebarOpened]="isSidebarOpened()" id="technologies">
+    <app-technologies />
+</container>
