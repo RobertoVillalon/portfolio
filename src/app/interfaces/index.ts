@@ -9,4 +9,11 @@ interface SidebarItem {
   icon: string;
 }
 
-export type {Page, SidebarItem};
+interface ExperienceBody {
+  title: string;
+  company: string;
+  period: string;
+  description: string[];
+}
+
+export type {Page, SidebarItem, ExperienceBody};
