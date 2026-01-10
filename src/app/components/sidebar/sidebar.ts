@@ -10,10 +10,10 @@ import { SidebarItem } from '../../interfaces';
 export class Sidebar {
   private readonly sidebarService = inject(SidebarService);
   readonly items: SidebarItem[] = [
-    { name: 'About', link: 'aboutme', icon: 'icon-[tabler--user]' },
-    { name: 'Experience', link: 'experience', icon: 'icon-[tabler--book]' },
-    { name: 'Projects', link: 'projects', icon: 'icon-[tabler--checklist]' },
-    { name: 'Technologies', link: 'technologies', icon: 'icon-[tabler--brand-tabler]' },
+    { name: 'Acerca de Mi', link: 'aboutme', icon: 'icon-[tabler--user]' },
+    { name: 'Experiencia', link: 'experience', icon: 'icon-[tabler--book]' },
+    { name: 'Proyectos', link: 'projects', icon: 'icon-[tabler--checklist]' },
+    { name: 'Tecnologias', link: 'technologies', icon: 'icon-[tabler--brand-tabler]' },
   ]
 
   toggleSidebar() {
