@@ -16,4 +16,21 @@ interface ExperienceBody {
   description: string[];
 }
 
-export type {Page, SidebarItem, ExperienceBody};
+interface Technology {
+  name: string;
+  icon: string;
+  iconColor: string;
+}
+
+interface TabnavItem {
+  name: string;
+  description: string;
+  status?: string;
+  creationDate?: string;
+  images?: string[];
+  technologies: Technology[],
+  repoLink?: string;
+  demoLink?: string;
+}
+
+export type {Page, SidebarItem, ExperienceBody, TabnavItem};

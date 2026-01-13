@@ -1,0 +1,114 @@
+<ul class="divide-y divide-[#ecf0f1] dark:divide-neutral-700">
+
+  <!-- Header -->
+  <li class="pb-3">
+    <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-100">
+      {{ item().name }}
+    </h2>
+    <p class="text-sm text-gray-500 dark:text-neutral-400">
+      {{ item().description }}
+    </p>
+  </li>
+
+  <!-- Status -->
+  @if (item().status) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Status
+      </span>
+
+      <span
+        class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
+        [class.bg-green-100]="item().status === 'active'"
+        [class.text-green-700]="item().status === 'active'"
+        [class.bg-yellow-100]="item().status === 'in-progress'"
+        [class.text-yellow-700]="item().status === 'in-progress'"
+        [class.bg-gray-200]="item().status === 'archived'"
+        [class.text-gray-700]="item().status === 'archived'"
+      >
+        {{ item().status }}
+      </span>
+    </li>
+  }
+
+  <!-- Creation Date -->
+  @if (item().creationDate) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Created
+      </span>
+      <span class="text-sm text-gray-800 dark:text-neutral-100">
+        {{ item().creationDate }}
+      </span>
+    </li>
+  }
+
+  <!-- Technologies -->
+  <li class="py-3">
+    <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
+      Technologies
+    </span>
+
+    <div class="flex flex-wrap gap-2">
+      @for (tech of item().technologies; track $index; let i = $index) {
+        <span
+          class="inline-flex items-center gap-x-2 px-3 py-1.5 rounded-lg text-sm
+                 bg-gray-100 text-gray-700
+                 dark:bg-neutral-800 dark:text-neutral-300"
+        >
+        <span class="{{tech.icon}} {{tech.iconColor}} shrink-0 size-6"></span>
+        {{ tech.name }}
+        </span>
+      }
+    </div>
+  </li>
+
+  <!-- Images -->
+  @if (item().images?.length) {
+    <li class="py-3">
+      <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
+        Preview
+      </span>
+
+      <div class="flex gap-3 overflow-x-auto">
+        @for (img of item().images; track $index) {
+          <img
+            [src]="img"
+            alt="Preview image"
+            class="h-24 w-36 rounded-lg object-cover border border-gray-200 dark:border-neutral-700 cursor-pointer"
+            data-hs-overlay="#image-preview"
+          />
+        }
+      </div>
+    </li>
+  }
+
+  <!-- Actions -->
+  @if (item().repoLink || item().demoLink) {
+    <li class="flex gap-3 pt-4">
+      @if (item().repoLink) {
+        <a
+          [href]="item().repoLink"
+          target="_blank"
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium
+                 bg-gray-900 text-white hover:bg-gray-800"
+        >
+          <i class="fa-brands fa-github"></i>
+          Repositorio
+        </a>
+      }
+
+      @if (item().demoLink) {
+        <a
+          [href]="item().demoLink"
+          target="_blank"
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium
+                 bg-blue-600 text-white hover:bg-blue-500"
+        >
+          Ir al proyecto
+        </a>
+      }
+    </li>
+  }
+
+</ul>

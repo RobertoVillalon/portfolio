@@ -1,4 +1,5 @@
-<section [id]="id()" [class]="isSidebarOpened() ? 'w-[82vw] ml-[16vw]' : 'w-[94vw] ml-[4vw]'" class="my-5 border border-[#ecf0f1] min-h-[50vh] rounded-lg p-4">
+<section   [id]="id()" class="my-5 border border-[#ecf0f1] min-h-[50vh] rounded-lg p-4 dark:border-neutral-700" [class.w-[82vw]]="isSidebarOpened()" 
+         [class.ml-[16vw]]="isSidebarOpened()" [class.w-[94vw]]="!isSidebarOpened()" [class.ml-[4vw]]="!isSidebarOpened()">
     <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">{{title()}}</span>
     <div class="border-b-2 border-[#ecf0f1] my-2"></div>
     <ng-content />

@@ -1,0 +1,28 @@
+<div class="flex flex-wrap bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm">
+  <div class="border-e border-[#ecf0f1] dark:border-neutral-700">
+    <nav class="flex flex-col space-y-2">
+      @for (item of items; track $index) {
+        <button
+          type="button"
+          (click)="setActiveTab($index + 1)"
+          role="tab"
+          [attr.aria-selected]="tabActiveIndex() === $index + 1"
+          class="py-1 pe-4 inline-flex items-center gap-x-2 border-e-2 text-sm whitespace-nowrap focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+          
+          [class.active-tab]="tabActiveIndex() === $index + 1"
+          [class.inactive-tab]="tabActiveIndex() !== $index + 1"
+        >
+          {{ item.name }}
+        </button>
+      }
+    </nav>
+  </div>
+
+  <div class="ms-5">
+    @for (item of items; track $index) {
+      <div [class.hidden]="tabActiveIndex() != $index + 1">
+        <projectbody [item]="item"/>
+      </div>
+    }
+  </div>
+</div>

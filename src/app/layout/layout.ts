@@ -5,7 +5,7 @@ import { AboutMe } from "../sections/about-me/about-me";
 import { Experience } from "../sections/experience/experience";
 import { Projects } from "../sections/projects/projects";
 import { Technologies } from "../sections/technologies/technologies";
-import { SidebarService } from '../service/sidebar-service';
+import { SidebarService } from '../service/sidebar/sidebar-service';
 
 @Component({
   selector: 'layout',
