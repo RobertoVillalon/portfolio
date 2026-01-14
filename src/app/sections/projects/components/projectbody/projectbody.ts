@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { TabnavItem } from '../../../../interfaces';
+import { ProjectItem } from '../../../../interfaces';
 
 @Component({
   selector: 'projectbody',
@@ -8,5 +8,5 @@ import { TabnavItem } from '../../../../interfaces';
   styleUrl: './projectbody.css',
 })
 export class Projectbody {
-  readonly item = input.required<TabnavItem>();
+  readonly item = input.required<ProjectItem>();
 }

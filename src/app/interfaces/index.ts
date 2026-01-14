@@ -22,15 +22,16 @@ interface Technology {
   iconColor: string;
 }
 
-interface TabnavItem {
+interface ProjectItem {
   name: string;
   description: string;
   status?: string;
   creationDate?: string;
+  lastUpdateDate?: string;
   images?: string[];
   technologies: Technology[],
   repoLink?: string;
   demoLink?: string;
 }
 
-export type {Page, SidebarItem, ExperienceBody, TabnavItem};
+export type {Page, SidebarItem, ExperienceBody, ProjectItem};

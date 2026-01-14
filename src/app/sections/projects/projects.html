@@ -1,1 +1,18 @@
-<tabnav />
+<div class="grid grid-cols-9 bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm">
+    <div class="col-span-1">
+        <tabnav [items]="tabNames" />
+    </div>
+    @if(this.currentItem().images == undefined || this.currentItem().images?.length == 0) {
+        <div class="mx-5 col-span-8">
+            <projectbody [item]="currentItem()"/>
+        </div>
+    } @else {
+        <div class="mx-5 col-span-4">
+            <projectbody [item]="currentItem()"/>
+        </div>
+        <div class="col-span-4">
+            <carousel [images]="currentItem().images ?? []"/>
+        </div>
+    }
+
+</div>

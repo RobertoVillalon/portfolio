@@ -14,7 +14,7 @@
   @if (item().status) {
     <li class="flex items-center justify-between py-3">
       <span class="text-sm text-gray-600 dark:text-neutral-300">
-        Status
+        Estado
       </span>
 
       <span
@@ -35,7 +35,7 @@
   @if (item().creationDate) {
     <li class="flex items-center justify-between py-3">
       <span class="text-sm text-gray-600 dark:text-neutral-300">
-        Created
+        Fecha de creación
       </span>
       <span class="text-sm text-gray-800 dark:text-neutral-100">
         {{ item().creationDate }}
@@ -43,10 +43,21 @@
     </li>
   }
 
+   @if (item().lastUpdateDate) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Ultima actualización
+      </span>
+      <span class="text-sm text-gray-800 dark:text-neutral-100">
+        {{ item().lastUpdateDate }}
+      </span>
+    </li>
+  }
+
   <!-- Technologies -->
   <li class="py-3">
     <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
-      Technologies
+      Tecnologias utilizadas
     </span>
 
     <div class="flex flex-wrap gap-2">
@@ -63,26 +74,6 @@
     </div>
   </li>
 
-  <!-- Images -->
-  @if (item().images?.length) {
-    <li class="py-3">
-      <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
-        Preview
-      </span>
-
-      <div class="flex gap-3 overflow-x-auto">
-        @for (img of item().images; track $index) {
-          <img
-            [src]="img"
-            alt="Preview image"
-            class="h-24 w-36 rounded-lg object-cover border border-gray-200 dark:border-neutral-700 cursor-pointer"
-            data-hs-overlay="#image-preview"
-          />
-        }
-      </div>
-    </li>
-  }
-
   <!-- Actions -->
   @if (item().repoLink || item().demoLink) {
     <li class="flex gap-3 pt-4">
@@ -90,10 +81,8 @@
         <a
           [href]="item().repoLink"
           target="_blank"
-          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium
-                 bg-gray-900 text-white hover:bg-gray-800"
-        >
-          <i class="fa-brands fa-github"></i>
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-gray-900 text-white hover:bg-gray-800">
+          <i class="icon-[tabler--brand-github] shrink-0 size-5"></i>
           Repositorio
         </a>
       }
@@ -102,9 +91,8 @@
         <a
           [href]="item().demoLink"
           target="_blank"
-          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium
-                 bg-blue-600 text-white hover:bg-blue-500"
-        >
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-500">
+          <i class="icon-[tabler--external-link] shrink-0 size-5"></i>
           Ir al proyecto
         </a>
       }
