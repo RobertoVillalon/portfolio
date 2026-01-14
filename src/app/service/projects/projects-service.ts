@@ -122,7 +122,6 @@ export class ProjectsService {
         }
       ],
       repoLink: "https://github.com/RobertoVillalon/Comparacion-Visualizacion-de-Algoritmos"
-    },
-
+    }
   ]
 }
