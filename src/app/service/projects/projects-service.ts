@@ -75,8 +75,8 @@ export class ProjectsService {
           iconColor: "text-orange-600"
         }
       ],
-      repoLink: 'https://github.com/RobertoVillalon/MapsApp',
-      demoLink: 'https://robertovillalon.github.io/MapsApp'
+      repoLink: 'https://github.com/RobertoVillalon/CustomShop',
+      demoLink: 'https://robertovillalon.github.io/CustomShop'
     },
     {
       name: "Laboratorios de estructura de datos",
