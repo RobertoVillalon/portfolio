@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { SidebarService } from '../../service/sidebar-service';
+import { SidebarService } from '../../service/sidebar/sidebar-service';
 import { SidebarItem } from '../../interfaces';
 
 @Component({
@@ -9,17 +9,11 @@ import { SidebarItem } from '../../interfaces';
 })
 export class Sidebar {
   private readonly sidebarService = inject(SidebarService);
-  readonly items: SidebarItem[] = [
-    { name: 'Acerca de Mi', link: 'aboutme', icon: 'icon-[tabler--user]' },
-    { name: 'Experiencia', link: 'experience', icon: 'icon-[tabler--book]' },
-    { name: 'Proyectos', link: 'projects', icon: 'icon-[tabler--checklist]' },
-    { name: 'Tecnologias', link: 'technologies', icon: 'icon-[tabler--brand-tabler]' },
-  ]
+  readonly items: SidebarItem[] = this.sidebarService.items;
 
   toggleSidebar() {
     this.sidebarService.toggle();
   }
-
 
   scrollTo(id: string) {
     const el = document.getElementById(id);
