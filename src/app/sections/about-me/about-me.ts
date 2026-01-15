@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Card } from "../../components/card/card";
-import { Divider } from "../../components/divider/divider";
+import { AboutmeService } from '../../service/aboutme/aboutme-service';
 
 @Component({
   selector: 'app-about-me',
-  imports: [Card, Divider],
+  imports: [Card],
   templateUrl: './about-me.html',
   styleUrl: './about-me.css',
 })
 export class AboutMe {
-
+  aboutmeService = inject(AboutmeService)
 }

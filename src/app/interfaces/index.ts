@@ -9,6 +9,19 @@ interface SidebarItem {
   icon: string;
 }
 
+interface AboutInfo {
+  name: string;
+  role: string;
+  summary: string[];
+  email: string;
+  linkedin: string;
+  values: {
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+}
+
 interface ExperienceBody {
   role: string;
   company: string;
@@ -34,4 +47,4 @@ interface ProjectItem {
   demoLink?: string;
 }
 
-export type {Page, SidebarItem, ExperienceBody, ProjectItem};
+export type {Page, SidebarItem, ExperienceBody, ProjectItem, AboutInfo};

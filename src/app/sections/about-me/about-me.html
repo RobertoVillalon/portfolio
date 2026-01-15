@@ -1,60 +1,80 @@
-<div class="flex flex-row mt-8">
-    <div class="flex items-center gap-x-3">
-        <div class="shrink-0">
-            <img class="shrink-0 size-32 rounded-full" src="/profile.jpg" alt="Avatar">
-        </div>
+<div class="mt-8 flex flex-col gap-8">
+  <!-- Header -->
+  <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+    <!-- Avatar -->
+    <img
+      class="size-32 rounded-full border border-[#ecf0f1] dark:border-neutral-700"
+      src="/profile.jpg"
+      alt="Avatar"
+    />
 
-        <div class="grow">
-            <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
-                Roberto Villalón
-            </h1>
-            <p class="text-sm text-gray-600 dark:text-neutral-400">
-                Full Stack developer / Devops Engineer
-            </p>
-        </div>
-    </div>
+    <!-- Info -->
+    <div class="flex-1">
+      <h1 class="text-xl font-semibold text-gray-800 dark:text-neutral-100">
+        {{ aboutmeService.about.name }}
+      </h1>
 
-    <divider [isVertical]="true"/>
+      <p class="text-sm text-gray-600 dark:text-neutral-400">
+        {{ aboutmeService.about.role }}
+      </p>
 
-    <div>
-        <p class="text-sm text-gray-600 dark:text-neutral-400">
-          Desarrollador de software fullstack y consultor técnico devops con más de 3 años de experiencia. Apasionado por la tecnologia y el mejoramiento
-          continuo de las soluciones que entrego 
+      @for (paragraph of aboutmeService.about.summary; track $index) {
+        <p class="mt-3 text-sm text-gray-700 dark:text-neutral-300 leading-relaxed">
+          {{ paragraph }}
         </p>
-
-        <p class="text-sm text-gray-600 dark:text-neutral-400">
-          Siempre estoy abierto a nuevas oportunidades y colaboraciones laborales. No dudes en contactarme a través de los siguientes medios:
-        </p>
-
-        <ul class="mt-5 flex flex-col gap-y-3">
-            <li class="flex items-center gap-x-2.5">
-            <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                robertoantonio3756@gmail.com
-            </a>
-            </li>
-
-            <li class="flex items-center gap-x-2.5">
-            <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/></svg>
-              <a href="www.linkedin.com/in/roberto-villalón" class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
-                  www.linkedin.com/in/roberto-villalón
-              </a>
-            </li>
-        </ul>
+      }
     </div>
-</div>
+  </div>
 
+  <!-- Divider -->
+  <div class="border-t border-[#ecf0f1] dark:border-neutral-700"></div>
 
+  <!-- Contact -->
+  <div>
+    <p class="text-sm text-gray-600 dark:text-neutral-400">
+      Siempre abierto a nuevas oportunidades, desafíos técnicos y colaboraciones profesionales.
+    </p>
 
-<!-- End About -->
+    <ul class="mt-4 flex flex-col gap-y-3">
+      <li class="flex items-center gap-x-2.5">
+        <svg class="size-4 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8" />
+        </svg>
 
-<!-- Icon Blocks -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <div class="grid sm:grid-cols-3 lg:grid-cols-4 items-center gap-6 md:gap-10">
-    <card title="Compromiso" description="Dedicacion total a cada proyecto para garantizar su exito" icon="icon-[tabler--circle-check]" />
-    <card title="Calidad" description="Entrega de soluciones tecnicas de alta calidad y rendimiento" icon="icon-[tabler--circle-check]" />
-    <card title="Flexibilidad" description="Gran adaptabilidad a diferentes tipos de proyectos de desarrollo y TI" icon="icon-[tabler--circle-check]" />
-    <card title="Agilidad" description="+ 3 años de experiencia trabajando bajo metodologias agiles" icon="icon-[tabler--circle-check]" />
+        <a
+          [href]="'mailto:' + aboutmeService.about.email"
+          class="text-sm text-gray-500 underline hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-300"
+        >
+          {{ aboutmeService.about.email }}
+        </a>
+      </li>
 
+      <li class="flex items-center gap-x-2.5">
+        <svg class="size-4 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 8a6 6 0 01-12 0 6 6 0 0112 0zM12 14v7" />
+        </svg>
+
+        <a
+          [href]="aboutmeService.about.linkedin"
+          target="_blank"
+          class="text-sm text-gray-500 underline hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-300"
+        >
+          linkedin.com/in/roberto-villalón
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Values -->
+  <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    @for (value of aboutmeService.about.values; track $index) {
+      <card
+        [title]="value.title"
+        [description]="value.description"
+        [icon]="value.icon"
+      />
+    }
   </div>
 </div>
