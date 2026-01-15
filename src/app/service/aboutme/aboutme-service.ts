@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { AboutInfo } from '../../interfaces';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { AboutInfo } from '../../interfaces';
 export class AboutmeService {
   readonly about: AboutInfo = {
     name: 'Roberto Villalón',
-    role: 'Full Stack Developer · Cloud / DevOps',
+    role: 'Full Stack Developer · DevOps',
     summary: [
       'Desarrollador de software full stack con más de 3 años de experiencia, enfocado en la construcción de aplicaciones web modernas, escalables y mantenibles.',
       'Trabajo principalmente con Angular, Spring Boot y arquitecturas basadas en microservicios y cloud.',
