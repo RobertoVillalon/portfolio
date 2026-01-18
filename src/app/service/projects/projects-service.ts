@@ -47,9 +47,9 @@ export class ProjectsService {
       repoLink: 'https://github.com/RobertoVillalon/MapsApp',
       demoLink: 'https://robertovillalon.github.io/MapsApp',
       images: [
-        '/projects/mapsapp/1.png',
-        '/projects/mapsapp/2.png',
-        '/projects/mapsapp/3.png',
+        'projects/mapsapp/1.png',
+        'projects/mapsapp/2.png',
+        'projects/mapsapp/3.png',
       ]
     },
     {
