@@ -31,7 +31,7 @@ jobs:
 
       # 3️⃣ Build Angular (ajusta el base-href según tu repo)
       - name: Build Angular
-        run: npm run build -- --configuration production --base-href "/MapsApp/"
+        run: npm run build -- --configuration production --base-href "/portfolio/"
         env:
           MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
 
