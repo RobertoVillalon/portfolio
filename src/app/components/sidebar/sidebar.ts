@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { SidebarService } from '../../service/sidebar/sidebar-service';
 import { SidebarItem } from '../../interfaces';
+import { DarkmodeSwitch } from "../darkmode-switch/darkmode-switch";
 
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
+  imports: [DarkmodeSwitch],
 })
 export class Sidebar {
   private readonly sidebarService = inject(SidebarService);

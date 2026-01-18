@@ -21,10 +21,10 @@
         class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
         [class.bg-green-100]="item().status === 'active'"
         [class.text-green-700]="item().status === 'active'"
-        [class.bg-yellow-100]="item().status === 'in-progress'"
-        [class.text-yellow-700]="item().status === 'in-progress'"
-        [class.bg-gray-200]="item().status === 'archived'"
-        [class.text-gray-700]="item().status === 'archived'"
+        [class.bg-yellow-100]="item().status === 'En progreso'"
+        [class.text-yellow-700]="item().status === 'En progreso'"
+        [class.bg-gray-200]="item().status === 'Finalizado'"
+        [class.text-gray-700]="item().status === 'Finalizado'"
       >
         {{ item().status }}
       </span>
@@ -81,7 +81,7 @@
         <a
           [href]="item().repoLink"
           target="_blank"
-          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-gray-900 text-white hover:bg-gray-800">
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-gray-900 text-white hover:bg-gray-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200">
           <i class="icon-[tabler--brand-github] shrink-0 size-5"></i>
           Repositorio
         </a>
@@ -98,5 +98,4 @@
       }
     </li>
   }
-
 </ul>

@@ -9,11 +9,24 @@ interface SidebarItem {
   icon: string;
 }
 
+interface AboutInfo {
+  name: string;
+  role: string;
+  summary: string[];
+  email: string;
+  linkedin: string;
+  values: {
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+}
+
 interface ExperienceBody {
-  title: string;
+  role: string;
   company: string;
   period: string;
-  description: string[];
+  tasks: string[];
 }
 
 interface Technology {
@@ -34,4 +47,19 @@ interface ProjectItem {
   demoLink?: string;
 }
 
-export type {Page, SidebarItem, ExperienceBody, ProjectItem};
+interface EducationItem {
+  institution: string;
+  degree: string;
+  period: string;
+  description?: string;
+}
+
+interface CertificationItem {
+  name: string;
+  provider: string;
+  issueDate: string;
+  credentialId?: string;
+  badgeUrl?: string;
+}
+
+export type {Page, SidebarItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem};
