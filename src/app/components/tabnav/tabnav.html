@@ -1,12 +1,12 @@
 <div class="max-h-[50vh] border-e border-[#ecf0f1] overflow-x-hidden overflow-y-auto dark:border-neutral-700">
-  <nav class="flex flex-col space-y-2 whitespace-pre-line">
+  <nav class="flex lg:flex-col space-y-2 whitespace-pre-line">
     @for (item of items(); track $index) {
       <button
         type="button"
         (click)="tabnavService.setActive($index + 1)"
         role="tab"
         [attr.aria-selected]="tabnavService.selectedIndex() === $index + 1"
-        class="inline-flex py-1 ps-2 border-s-2 text-sm justify-start text-start focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+        class="inline-flex py-1 ps-2 lg:border-s-2 text-sm lg:justify-start lg:text-start justify-center text-center focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
         
         [class.active-tab]="tabnavService.selectedIndex()  === $index + 1"
         [class.inactive-tab]="tabnavService.selectedIndex() !== $index + 1"

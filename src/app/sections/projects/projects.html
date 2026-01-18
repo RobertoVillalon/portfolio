@@ -1,18 +1,34 @@
-<div class="grid grid-cols-9 bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm">
-    <div class="col-span-1">
-        <tabnav [items]="tabNames" />
-    </div>
-    @if(this.currentItem().images == undefined || this.currentItem().images?.length == 0) {
-        <div class="mx-5 col-span-8">
-            <projectbody [item]="currentItem()"/>
-        </div>
-    } @else {
-        <div class="mx-5 col-span-4">
-            <projectbody [item]="currentItem()"/>
-        </div>
-        <div class="col-span-4">
-            <carousel [images]="currentItem().images ?? []"/>
-        </div>
-    }
+<div
+  class="
+    bg-white dark:bg-neutral-900
+    p-4 rounded-lg shadow-sm
+    flex flex-col gap-4
+    lg:grid lg:grid-cols-9 lg:gap-4
+  "
+>
+  <!-- Tabs -->
+  <div class="lg:col-span-2">
+    <tabnav [items]="tabNames" />
+  </div>
 
+  @if (!currentItem().images || currentItem().images?.length === 0) {
+
+    <!-- Body sin imágenes -->
+    <div class="lg:col-span-7">
+      <projectbody [item]="currentItem()" />
+    </div>
+
+  } @else {
+
+    <!-- Body -->
+    <div class="lg:col-span-4">
+      <projectbody [item]="currentItem()" />
+    </div>
+
+    <!-- Carousel -->
+    <div class="lg:col-span-3">
+      <carousel [images]="currentItem().images ?? []" />
+    </div>
+
+  }
 </div>
