@@ -10,4 +10,6 @@ export class Container {
   title = input.required<string>();
   isSidebarOpened = input.required<boolean>();
   id = input.required<string>();
+
+  
 }

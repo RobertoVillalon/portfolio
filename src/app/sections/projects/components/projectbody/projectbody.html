@@ -1,0 +1,101 @@
+<ul class="divide-y divide-[#ecf0f1] dark:divide-neutral-700">
+
+  <!-- Header -->
+  <li class="pb-3">
+    <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-100">
+      {{ item().name }}
+    </h2>
+    <p class="text-sm text-gray-500 dark:text-neutral-400">
+      {{ item().description }}
+    </p>
+  </li>
+
+  <!-- Status -->
+  @if (item().status) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Estado
+      </span>
+
+      <span
+        class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
+        [class.bg-green-100]="item().status === 'active'"
+        [class.text-green-700]="item().status === 'active'"
+        [class.bg-yellow-100]="item().status === 'En progreso'"
+        [class.text-yellow-700]="item().status === 'En progreso'"
+        [class.bg-gray-200]="item().status === 'Finalizado'"
+        [class.text-gray-700]="item().status === 'Finalizado'"
+      >
+        {{ item().status }}
+      </span>
+    </li>
+  }
+
+  <!-- Creation Date -->
+  @if (item().creationDate) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Fecha de creación
+      </span>
+      <span class="text-sm text-gray-800 dark:text-neutral-100">
+        {{ item().creationDate }}
+      </span>
+    </li>
+  }
+
+   @if (item().lastUpdateDate) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Ultima actualización
+      </span>
+      <span class="text-sm text-gray-800 dark:text-neutral-100">
+        {{ item().lastUpdateDate }}
+      </span>
+    </li>
+  }
+
+  <!-- Technologies -->
+  <li class="py-3">
+    <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
+      Tecnologias utilizadas
+    </span>
+
+    <div class="flex flex-wrap gap-2">
+      @for (tech of item().technologies; track $index; let i = $index) {
+        <span
+          class="inline-flex items-center gap-x-2 px-3 py-1.5 rounded-lg text-sm
+                 bg-gray-100 text-gray-700
+                 dark:bg-neutral-800 dark:text-neutral-300"
+        >
+        <span class="{{tech.icon}} {{tech.iconColor}} shrink-0 size-6"></span>
+        {{ tech.name }}
+        </span>
+      }
+    </div>
+  </li>
+
+  <!-- Actions -->
+  @if (item().repoLink || item().demoLink) {
+    <li class="flex gap-3 pt-4">
+      @if (item().repoLink) {
+        <a
+          [href]="item().repoLink"
+          target="_blank"
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-gray-900 text-white hover:bg-gray-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200">
+          <i class="icon-[tabler--brand-github] shrink-0 size-5"></i>
+          Repositorio
+        </a>
+      }
+
+      @if (item().demoLink) {
+        <a
+          [href]="item().demoLink"
+          target="_blank"
+          class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-500">
+          <i class="icon-[tabler--external-link] shrink-0 size-5"></i>
+          Ir al proyecto
+        </a>
+      }
+    </li>
+  }
+</ul>
