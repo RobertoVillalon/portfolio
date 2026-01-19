@@ -1,5 +1,5 @@
 import { Component, inject, input } from '@angular/core';
-import { TabnavService } from '../../service/tabnav/tabnav-service';
+import { SelectorService } from '../../service/selector/selector-service';
 
 @Component({
   selector: 'tabnav',
@@ -7,6 +7,6 @@ import { TabnavService } from '../../service/tabnav/tabnav-service';
   styleUrl: './tabnav.css',
 })
 export class Tabnav {
-  readonly tabnavService = inject(TabnavService);
+  readonly selectorService = inject(SelectorService);
   readonly items = input.required<string[]>();
 }

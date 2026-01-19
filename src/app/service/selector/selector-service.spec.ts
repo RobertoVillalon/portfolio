@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TabnavService } from './tabnav-service';
+import { SelectorService } from './selector-service';
 
-describe('TabnavService', () => {
-  let service: TabnavService;
+describe('SelectorService', () => {
+  let service: SelectorService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TabnavService);
+    service = TestBed.inject(SelectorService);
   });
 
   it('should be created', () => {
