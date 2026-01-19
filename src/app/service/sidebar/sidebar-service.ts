@@ -34,6 +34,7 @@ export class SidebarService {
 
   @HostListener('window:resize')
   onResize() {
+    this.isSidebarOpened();
     this.isDesktop.set(window.innerWidth >= 1024);
   }
 }
