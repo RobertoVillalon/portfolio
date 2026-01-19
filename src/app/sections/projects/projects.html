@@ -6,26 +6,27 @@
     lg:grid lg:grid-cols-9 lg:gap-4
   "
 >
-  <!-- Tabs -->
-  <div class="lg:col-span-2">
+  <div class="lg:col-span-2 sm:hidden md:hidden lg:block">
     <tabnav [items]="tabNames" />
   </div>
 
+  <div class="lg:hidden sm:md:block ">
+    <app-select title="Proyectos" [items]="tabNames"/>
+  </div>
+
+
   @if (!currentItem().images || currentItem().images?.length === 0) {
 
-    <!-- Body sin imágenes -->
     <div class="lg:col-span-7">
       <projectbody [item]="currentItem()" />
     </div>
 
   } @else {
 
-    <!-- Body -->
     <div class="lg:col-span-4">
       <projectbody [item]="currentItem()" />
     </div>
 
-    <!-- Carousel -->
     <div class="lg:col-span-3">
       <carousel [images]="currentItem().images ?? []" />
     </div>

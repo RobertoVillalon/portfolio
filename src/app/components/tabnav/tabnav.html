@@ -3,13 +3,13 @@
     @for (item of items(); track $index) {
       <button
         type="button"
-        (click)="tabnavService.setActive($index + 1)"
+        (click)="selectorService.setActive($index + 1)"
         role="tab"
-        [attr.aria-selected]="tabnavService.selectedIndex() === $index + 1"
+        [attr.aria-selected]="selectorService.selectedIndex() === $index + 1"
         class="inline-flex py-1 ps-2 lg:border-s-2 text-sm lg:justify-start lg:text-start justify-center text-center focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
         
-        [class.active-tab]="tabnavService.selectedIndex()  === $index + 1"
-        [class.inactive-tab]="tabnavService.selectedIndex() !== $index + 1"
+        [class.active-tab]="selectorService.selectedIndex()  === $index + 1"
+        [class.inactive-tab]="selectorService.selectedIndex() !== $index + 1"
       >
         {{ item }}
       </button>
