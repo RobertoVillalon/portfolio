@@ -10,12 +10,8 @@ import { DarkmodeSwitch } from "../darkmode-switch/darkmode-switch";
   imports: [DarkmodeSwitch],
 })
 export class Sidebar {
-  private readonly sidebarService = inject(SidebarService);
+  readonly sidebarService = inject(SidebarService);
   readonly items: SidebarItem[] = this.sidebarService.items;
-
-  toggleSidebar() {
-    this.sidebarService.toggle();
-  }
 
   scrollTo(id: string) {
     const el = document.getElementById(id);

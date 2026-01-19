@@ -1,5 +1,7 @@
-import { computed, HostListener, Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { SidebarItem } from '../../interfaces';
+
+declare const window: any;
 
 @Injectable({
   providedIn: 'root',
@@ -11,30 +13,4 @@ export class SidebarService {
     { name: 'Proyectos', link: 'projects', icon: 'icon-[tabler--checklist]' },
     { name: 'Formación', link: 'academicinformation', icon: 'icon-[tabler--certificate]' },
   ]
-  readonly isOpened = signal<boolean>(true);
-  isDesktop = signal(window.innerWidth >= 1024);
-  mobileSidebarOpened = signal(false);
-
-  toggle() {
-    this.isOpened.update(v => !v);
-  }
-
-  open() {
-    this.isOpened.set(true);
-  }
-
-  close() {
-    this.isOpened.set(false);
-  }
-
-  isSidebarOpened = computed(() => {
-    if (this.isDesktop()) return true;
-    return this.mobileSidebarOpened();
-  });
-
-  @HostListener('window:resize')
-  onResize() {
-    this.isSidebarOpened();
-    this.isDesktop.set(window.innerWidth >= 1024);
-  }
 }
