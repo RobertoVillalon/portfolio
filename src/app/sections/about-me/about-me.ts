@@ -6,7 +6,6 @@ import { AboutmeService } from '../../service/aboutme/aboutme-service';
   selector: 'app-about-me',
   imports: [Card],
   templateUrl: './about-me.html',
-  styleUrl: './about-me.css',
 })
 export class AboutMe {
   aboutmeService = inject(AboutmeService)

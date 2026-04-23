@@ -3,9 +3,7 @@ import { AcademicinformationService } from '../../service/academicinformation/ac
 
 @Component({
   selector: 'app-academic-information',
-  imports: [],
   templateUrl: './academic-information.html',
-  styleUrl: './academic-information.css',
 })
 export class AcademicInformation {
   readonly academicinformationService = inject(AcademicinformationService);

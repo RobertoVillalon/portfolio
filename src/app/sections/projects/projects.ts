@@ -10,7 +10,6 @@ import { Select } from '../../components/select/select';
   selector: 'app-projects',
   imports: [Tabnav, Projectbody, Carousel, Select],
   templateUrl: './projects.html',
-  styleUrl: './projects.css',
 })
 export class Projects {
   readonly selectorService = inject(SelectorService);

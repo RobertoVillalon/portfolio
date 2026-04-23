@@ -3,9 +3,7 @@ import { SelectorService } from '../../service/selector/selector-service';
 
 @Component({
   selector: 'app-select',
-  imports: [],
   templateUrl: './select.html',
-  styleUrl: './select.css',
 })
 export class Select {
   readonly title = input.required<string>();
