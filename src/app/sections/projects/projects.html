@@ -1,11 +1,11 @@
 <div
   class=" bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm flex flex-col gap-4 lg:grid lg:grid-cols-9 lg:gap-4">
   <div class="lg:block hidden lg:col-span-2 ">
-    <tabnav [items]="tabNames" />
+    <tabnav [items]="tabNames()" />
   </div>
-
+  
   <div class="lg:hidden sm:md:block ">
-    <app-select title="Proyectos" [items]="tabNames"/>
+    <app-select title="Proyectos" [items]="tabNames()"/>
   </div>
 
 

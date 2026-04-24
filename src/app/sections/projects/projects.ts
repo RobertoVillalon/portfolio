@@ -14,6 +14,13 @@ import { Select } from '../../components/select/select';
 export class Projects {
   readonly selectorService = inject(SelectorService);
   readonly projectService = inject(ProjectsService)
-  readonly tabNames: string[] = this.projectService.items.flatMap(item => item.name ?? [])
-  readonly currentItem = computed(() => this.projectService.items[this.selectorService.selectedIndex() - 1]);
+  readonly tabNames = computed(() =>
+    this.projectService.items().map(item => item.name)
+  );
+  readonly currentItem = computed(() => {
+    const items = this.projectService.items();
+    const index = this.selectorService.selectedIndex() - 1;
+
+    return items[index] ?? null;
+  });
 }
