@@ -1,14 +1,17 @@
-import { Component, inject } from '@angular/core';
-import { Divider } from "../../components/divider/divider";
+import { Component, computed, inject } from '@angular/core';
 import { ExperienceService } from '../../service/experience/experience-service';
 
 @Component({
   selector: 'app-experience',
-  imports: [Divider],
   templateUrl: './experience.html',
-  styleUrl: './experience.css',
 })
 
 export class Experience {
   experienceService = inject(ExperienceService)
+
+  experienceData = computed(() => {
+    const items = this.experienceService.items()
+
+    return items ?? null;  
+  })
 }

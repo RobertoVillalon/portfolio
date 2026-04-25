@@ -10,7 +10,6 @@ import { AcademicInformation } from "../sections/academic-information/academic-i
   selector: 'layout',
   imports: [Sidebar, Container, AboutMe, Experience, Projects, AcademicInformation],
   templateUrl: './layout.html',
-  styleUrl: './layout.css',
 })
 export class Layout {
 }
