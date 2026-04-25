@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ExperienceService } from '../../service/experience/experience-service';
 
 @Component({
@@ -8,4 +8,10 @@ import { ExperienceService } from '../../service/experience/experience-service';
 
 export class Experience {
   experienceService = inject(ExperienceService)
+
+  experienceData = computed(() => {
+    const items = this.experienceService.items()
+
+    return items ?? null;  
+  })
 }

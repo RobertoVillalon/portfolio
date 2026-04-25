@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { ProjectItem } from '../../interfaces';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { HttpClient } from '@angular/common/http';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root',
