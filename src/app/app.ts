@@ -5,7 +5,6 @@ import { Layout } from "./layout/layout";
   selector: 'app-root',
   imports: [Layout],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('portfolio');

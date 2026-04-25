@@ -5,7 +5,6 @@ import { ProjectItem } from '../../../../interfaces';
   selector: 'projectbody',
   imports: [],
   templateUrl: './projectbody.html',
-  styleUrl: './projectbody.css',
 })
 export class Projectbody {
   readonly item = input.required<ProjectItem>();

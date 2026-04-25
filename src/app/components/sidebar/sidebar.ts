@@ -6,7 +6,6 @@ import { DarkmodeSwitch } from "../darkmode-switch/darkmode-switch";
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.html',
-  styleUrl: './sidebar.css',
   imports: [DarkmodeSwitch],
 })
 export class Sidebar {

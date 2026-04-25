@@ -2,9 +2,7 @@ import { Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'carousel',
-  imports: [],
   templateUrl: './carousel.html',
-  styleUrl: './carousel.css',
 })
 export class Carousel {
   carouselIndex = signal<number>(0);
