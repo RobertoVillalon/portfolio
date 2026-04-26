@@ -1,0 +1,64 @@
+name: Update Degrees JSON
+
+on:
+  workflow_dispatch:
+    inputs:
+      institution:
+        description: "Institución"
+        required: true
+      degree:
+        description: "Título / Carrera"
+        required: true
+      startDate:
+        description: "Fecha inicio (YYYY-MM)"
+        required: true
+      endDate:
+        description: "Fecha término (YYYY-MM)"
+        required: true
+      type:
+        description: "Tipo (degree | certification)"
+        required: true
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update JSON
+        run: |
+          FILE="src/assets/data/degrees.json"
+
+          node -e "
+          const fs = require('fs');
+          const file = '$FILE';
+
+          const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+
+          const newItem = {
+            institution: '${{ github.event.inputs.institution }}',
+            degree: '${{ github.event.inputs.degree }}',
+            startDate: '${{ github.event.inputs.startDate }}',
+            endDate: '${{ github.event.inputs.endDate }}',
+            type: '${{ github.event.inputs.type }}'
+          };
+
+          data.push(newItem);
+
+          fs.writeFileSync(file, JSON.stringify(data, null, 2));
+          "
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "feat: add new degree"
+          branch: "update/degrees-${{ github.run_id }}"
+          title: "Add new degree entry"
+          body: "Automated update to degrees.json"
