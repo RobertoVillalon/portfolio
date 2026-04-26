@@ -8,5 +8,5 @@ import { toSignal } from '@angular/core/rxjs-interop';
 })
 export class ExperienceService {
     readonly http = inject(HttpClient);
-    readonly items = toSignal(this.http.get<ExperienceBody[]>('/assets/data/experience.json'),{ initialValue: [] })
+    readonly items = toSignal(this.http.get<ExperienceBody[]>('assets/data/experience.json'),{ initialValue: [] })
 }

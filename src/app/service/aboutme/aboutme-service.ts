@@ -8,5 +8,5 @@ import { toSignal } from '@angular/core/rxjs-interop';
 })
 export class AboutmeService {
   private readonly http = inject(HttpClient);
-  readonly items = toSignal(this.http.get<AboutInfo>('/assets/data/personal.json'))
+  readonly items = toSignal(this.http.get<AboutInfo>('assets/data/personal.json'))
 }
