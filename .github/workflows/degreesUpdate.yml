@@ -7,20 +7,17 @@ on:
         description: "Institución"
         required: true
       degree:
-        description: "Título / Carrera"
+        description: "Carrera"
         required: true
-      startDate:
-        description: "Fecha inicio (YYYY-MM)"
+      period:
+        description: "Periodo (ej: Mar. 2024 – Nov. 2025)"
         required: true
-      endDate:
-        description: "Fecha término (YYYY-MM)"
-        required: true
-      type:
-        description: "Tipo (degree | certification)"
+      description:
+        description: "Descripción"
         required: true
 
 jobs:
-  update-json:
+  update-degrees:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,7 +29,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Update JSON
+      - name: Update degrees.json
         run: |
           FILE="src/assets/data/degrees.json"
 
@@ -40,14 +37,21 @@ jobs:
           const fs = require('fs');
           const file = '$FILE';
 
-          const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+          let data = [];
+
+          if (fs.existsSync(file)) {
+            data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+          }
+
+          if (!Array.isArray(data)) {
+            throw new Error('degrees.json debe ser un array');
+          }
 
           const newItem = {
             institution: '${{ github.event.inputs.institution }}',
             degree: '${{ github.event.inputs.degree }}',
-            startDate: '${{ github.event.inputs.startDate }}',
-            endDate: '${{ github.event.inputs.endDate }}',
-            type: '${{ github.event.inputs.type }}'
+            period: '${{ github.event.inputs.period }}',
+            description: '${{ github.event.inputs.description }}'
           };
 
           data.push(newItem);
