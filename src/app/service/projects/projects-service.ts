@@ -8,5 +8,5 @@ import { toSignal } from '@angular/core/rxjs-interop';
 })
 export class ProjectsService {
   private readonly http = inject(HttpClient);
-  readonly items = toSignal(this.http.get<ProjectItem[]>('/assets/data/projects.json'),{ initialValue: [] })
+  readonly items = toSignal(this.http.get<ProjectItem[]>('assets/data/projects.json'),{ initialValue: [] })
 }

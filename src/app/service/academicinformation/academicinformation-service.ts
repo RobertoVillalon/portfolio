@@ -8,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AcademicinformationService {
   private readonly http = inject(HttpClient);
-  readonly education = toSignal(this.http.get<EducationItem[]>('/assets/data/degrees.json'));
-  readonly certifications = toSignal(this.http.get<CertificationItem[]>('/assets/data/certifications.json'));
+  readonly education = toSignal(this.http.get<EducationItem[]>('assets/data/degrees.json'));
+  readonly certifications = toSignal(this.http.get<CertificationItem[]>('assets/data/certifications.json'));
 }
