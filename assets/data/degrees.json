@@ -1,0 +1,20 @@
+[
+  {
+    "institution": "IPCHILE",
+    "degree": "Ingeniería Informática",
+    "period": "Mar. 2024 – Nov. 2025",
+    "description": "Formación profesional orientada al desarrollo de software, arquitectura de sistemas, bases de datos y gestión de proyectos tecnológicos."
+  },
+  {
+    "institution": "IPCHILE",
+    "degree": "Técnico Analista Programador",
+    "period": "Mar. 2021 – May. 2023",
+    "description": "Formación técnica enfocada en programación, lógica computacional, bases de datos y desarrollo de aplicaciones."
+  },
+  {
+    "institution": "Universidad de la Serena",
+    "degree": "Ingenieria en Computación",
+    "period": "Mar 2018 - Nov 2020",
+    "description": "Carrera no Finalizada"
+  }
+]
