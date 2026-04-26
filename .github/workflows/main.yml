@@ -23,8 +23,6 @@ jobs:
 
       - name: Build Angular
         run: npm run build -- --configuration production --base-href "/portfolio/"
-        env:
-          MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
 
       - name: Copiar index.html a 404.html
         run: cp ./dist/portfolio/browser/index.html ./dist/portfolio/browser/404.html        
@@ -33,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/${{ github.event.inputs.projectName }}/browser
+          publish_dir: ./dist/portfolio/browser
