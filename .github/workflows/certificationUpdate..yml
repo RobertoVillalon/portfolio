@@ -9,6 +9,12 @@ on:
       provider:
         description: "Proveedor"
         required: true
+      iconName:
+        description: "Icono (Formato Iconify (icon-[devicon-plain--kotlin))"
+        required: true
+      iconColor:
+        description: "Color del icono (Formato Tailwind (text-purple-600))"
+        required: true
       issuesDate:
         description: "Fecha de emisión"
         required: true
@@ -50,7 +56,7 @@ jobs:
           const newItem = {
             name: '${{ github.event.inputs.name }}',
             provider: '${{ github.event.inputs.provider }}',
-            icon: { icon: '${{ github.event.inputs.provider }}', iconColor: 'text-gray-500' },
+            icon: { icon: '${{ github.event.inputs.iconName }}', iconColor: '${{ github.event.inputs.iconColor }}' },
             issuesDate: '${{ github.event.inputs.issuesDate }}',
           };
 
