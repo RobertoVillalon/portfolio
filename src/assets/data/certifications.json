@@ -7,5 +7,14 @@
       "color": "text-orange-500"
     },
     "issueDate": "04 Septiembre 2025"
+  },
+  {
+    "name": "Github Actions",
+    "provider": "GitHub",
+    "icon": {
+      "name": "icon-[devicon-plain--githubactions]",
+      "color": "text-orange-600"
+    },
+    "issuesDate": "01 Mayo 2026"
   }
 ]
