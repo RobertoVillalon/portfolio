@@ -15,7 +15,7 @@ on:
       iconColor:
         description: "Color del icono (Formato Tailwind (text-purple-600))"
         required: true
-      issuesDate:
+      issueDate:
         description: "Fecha de emisión (Formato: 01 Enero 2000)"
         required: true
 permissions:
@@ -57,7 +57,7 @@ jobs:
             name: '${{ github.event.inputs.name }}',
             provider: '${{ github.event.inputs.provider }}',
             icon: { name: '${{ github.event.inputs.iconName }}', color: '${{ github.event.inputs.iconColor }}' },
-            issuesDate: '${{ github.event.inputs.issuesDate }}',
+            issueDate: '${{ github.event.inputs.issueDate }}',
           };
 
           data.push(newItem);
