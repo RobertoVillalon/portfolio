@@ -2,19 +2,7 @@
   {
     "name": "AWS Cloud Practitioner (Foundational)",
     "provider": "Amazon Web Services (AWS)",
-    "icon": {
-      "name": "icon-[tabler--brand-aws]",
-      "color": "text-orange-500"
-    },
+    "icon": {  "name": "icon-[tabler--brand-aws]", "color": "text-orange-500" },
     "issueDate": "04 Septiembre 2025"
-  },
-  {
-    "name": "Github Actions",
-    "provider": "GitHub",
-    "icon": {
-      "name": "icon-[devicon-plain--githubactions]",
-      "color": "text-orange-600"
-    },
-    "issuesDate": "01 Mayo 2026"
   }
 ]
