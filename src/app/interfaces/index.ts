@@ -31,8 +31,12 @@ interface ExperienceBody {
 
 interface Technology {
   name: string;
-  icon: string;
-  iconColor: string;
+  icon: Icon;
+}
+
+interface Icon {
+  name: string;
+  color: string;
 }
 
 interface ProjectItem {
@@ -58,8 +62,7 @@ interface CertificationItem {
   name: string;
   provider: string;
   issueDate: string;
-  credentialId?: string;
-  badgeUrl?: string;
+  icon: Icon
 }
 
 export type {Page, SidebarItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem};

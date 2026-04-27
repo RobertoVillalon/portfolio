@@ -1,0 +1,68 @@
+name: Update Certifications JSON
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Nombre de la certificación"
+        required: true
+      provider:
+        description: "Proveedor"
+        required: true
+      issuesDate:
+        description: "Fecha de emisión"
+        required: true
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-certifications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update certifications.json
+        run: |
+          FILE="src/assets/data/certifications.json"
+
+          node -e "
+          const fs = require('fs');
+          const file = '$FILE';
+
+          let data = [];
+
+          if (fs.existsSync(file)) {
+            data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+          }
+
+          if (!Array.isArray(data)) {
+            throw new Error('certifications.json debe ser un array');
+          }
+
+          const newItem = {
+            name: '${{ github.event.inputs.name }}',
+            provider: '${{ github.event.inputs.provider }}',
+            icon: { icon: '${{ github.event.inputs.provider }}', iconColor: 'text-gray-500' },
+            issuesDate: '${{ github.event.inputs.issuesDate }}',
+          };
+
+          data.push(newItem);
+
+          fs.writeFileSync(file, JSON.stringify(data, null, 2));
+          "
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "feat: add new certification"
+          branch: "update/certification-${{ github.run_id }}"
+          title: "Add new certification entry"
+          body: "Automated update to certification.json"
