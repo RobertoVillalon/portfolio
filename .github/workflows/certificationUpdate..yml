@@ -16,7 +16,7 @@ on:
         description: "Color del icono (Formato Tailwind (text-purple-600))"
         required: true
       issuesDate:
-        description: "Fecha de emisión"
+        description: "Fecha de emisión (Formato: 01 Enero 2000)"
         required: true
 permissions:
   contents: write
