@@ -56,7 +56,7 @@ jobs:
           const newItem = {
             name: '${{ github.event.inputs.name }}',
             provider: '${{ github.event.inputs.provider }}',
-            icon: { icon: '${{ github.event.inputs.iconName }}', iconColor: '${{ github.event.inputs.iconColor }}' },
+            icon: { name: '${{ github.event.inputs.iconName }}', color: '${{ github.event.inputs.iconColor }}' },
             issuesDate: '${{ github.event.inputs.issuesDate }}',
           };
 
