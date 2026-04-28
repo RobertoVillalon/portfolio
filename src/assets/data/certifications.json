@@ -7,5 +7,14 @@
       "color": "text-orange-500"
     },
     "issueDate": "04 Septiembre 2025"
+  },
+  {
+    "name": "AWS Cloud Practitioner",
+    "provider": "Amazon Web Services",
+    "icon": {
+      "name": "icon-[devicon-plain--amazonwebservices]",
+      "color": "text-orange-500"
+    },
+    "issueDate": "04 Septiembre 2025"
   }
 ]
