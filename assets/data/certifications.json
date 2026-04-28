@@ -1,9 +1,9 @@
 [
   {
-    "name": "AWS Cloud Practitioner (Foundational)",
-    "provider": "Amazon Web Services (AWS)",
+    "name": "AWS Cloud Practitioner",
+    "provider": "Amazon Web Services",
     "icon": {
-      "name": "icon-[tabler--brand-aws]",
+      "name": "icon-[devicon-plain--amazonwebservices]",
       "color": "text-orange-500"
     },
     "issueDate": "04 Septiembre 2025"
