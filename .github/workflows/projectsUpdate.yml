@@ -1,19 +1,25 @@
-name: Update Degrees
+name: Update Projects
 
 on:
   workflow_dispatch:
     inputs:
-      institution:
-        description: "Institución"
-        required: true
-      degree:
-        description: "Carrera"
-        required: true
-      period:
-        description: "Periodo (ej: Mar. 2024 – Nov. 2025)"
+      name:
+        description: "Nombre del proyecto"
         required: true
       description:
         description: "Descripción"
+        required: true
+      status:
+        description: "Estado del proyecto (en desarrollo, completado, etc.)"
+        required: true
+      creationDate:
+        description: "Fecha de creación (YYYY-MM-DD)"
+        required: true
+      lastUpdateDate:
+        description: "Fecha de última actualización (YYYY-MM-DD)"
+        required: true
+      technologies:
+        description: "Tecnologías utilizadas (separadas por comas)"
         required: true
 permissions:
   contents: write
