@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/deployAngularToGithubPages.yml
+    uses: RobertoVillalon/infraestructura/.github/shared-workflows/deployAngularToGithubPages.yml@main
     with:
       base_href: "/portfolio/"
       publish_dir: "./dist/portfolio/browser"
