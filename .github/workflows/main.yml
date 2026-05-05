@@ -1,4 +1,4 @@
-name: Deploy Angular to GitHub Pages
+name: Deploy
 
 on:
   push:
@@ -11,26 +11,10 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-
-      - name: Instalar dependencias
-        run: npm ci
-
-      - name: Build Angular
-        run: npm run build -- --configuration production --base-href "/portfolio/"
-
-      - name: Copiar index.html a 404.html
-        run: cp ./dist/portfolio/browser/index.html ./dist/portfolio/browser/404.html        
-
-      - name: Deploy a GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio/browser
+  deploy:
+    uses: ./.github/workflows/deployAngularToGithubPages.yml
+    with:
+      base_href: "/portfolio/"
+      publish_dir: "./dist/portfolio/browser"
+    secrets:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
