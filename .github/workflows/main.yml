@@ -16,5 +16,3 @@ jobs:
     with:
       base_href: "/portfolio/"
       publish_dir: "./dist/portfolio/browser"
-    secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
