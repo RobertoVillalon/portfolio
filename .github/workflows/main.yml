@@ -16,3 +16,4 @@ jobs:
     with:
       base_href: "/portfolio/"
       publish_dir: "./dist/portfolio/browser"
+      environment_keys: "MAPBOX_TOKEN"
