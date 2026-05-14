@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 'lts/*'
 
       - name: Update degrees.json
         run: |
@@ -57,8 +57,14 @@ jobs:
             description: '${{ github.event.inputs.description }}'
           };
 
-          data.push(newItem);
+          const objectIndex = data.findIndex(degree => degree.name === newItem.name)
 
+          if(objectIndex != -1){
+            data[objectIndex] = newItem
+          }
+          else{
+            data.push(newItem)
+          }
           fs.writeFileSync(file, JSON.stringify(data, null, 2));
           "
 
