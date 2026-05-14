@@ -36,11 +36,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-
+          node-version: 'lts/*'
+          
       - name: Update degrees.json
         run: |
-          FILE="src/assets/data/degrees.json"
+          FILE="src/assets/data/projects.json"
 
           node -e "
           const fs = require('fs');
@@ -53,25 +53,34 @@ jobs:
           }
 
           if (!Array.isArray(data)) {
-            throw new Error('degrees.json debe ser un array');
+            throw new Error('projects.json debe ser un array');
           }
 
           const newItem = {
-            institution: '${{ github.event.inputs.institution }}',
-            degree: '${{ github.event.inputs.degree }}',
-            period: '${{ github.event.inputs.period }}',
-            description: '${{ github.event.inputs.description }}'
+            name: '${{ github.event.inputs.name }}',
+            description: '${{ github.event.inputs.description }}',
+            status: '${{ github.event.inputs.status }}',
+            creationDate: '${{ github.event.inputs.creationDate }}',
+            lastUpdateDate: '${{ github.event.inputs.lastUpdateDate }}',
+            technologies: '${{ github.event.inputs.technologies }}',
           };
 
-          data.push(newItem);
+          const objectIndex = data.findIndex(project => project.name === newItem.name)
 
+          if(objectIndex != -1){
+            data[objectIndex] = newItem
+          }
+          else{
+            data.push(newItem)
+          }
+          
           fs.writeFileSync(file, JSON.stringify(data, null, 2));
           "
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "feat: se añade ${{github.event.inputs.degree}}"
-          branch: "update/degrees-${{ github.run_id }}"
-          title: "Se añade ${{github.event.inputs.degree}}"
-          body: "Automated update to degrees.json"
+          commit-message: "feat: se añade ${{github.event.inputs.name}}"
+          branch: "update/projects-${{ github.run_id }}"
+          title: "Se añade ${{github.event.inputs.name}}"
+          body: "Automated update to projects.json"
