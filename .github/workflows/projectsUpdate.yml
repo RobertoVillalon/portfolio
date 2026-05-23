@@ -10,8 +10,13 @@ on:
         description: "Descripción"
         required: true
       status:
-        description: "Estado del proyecto (en desarrollo, completado, etc.)"
+        type: choice
+        description: "Estado del proyecto"
         required: true
+        options:
+          - "Activo"
+          - "Actualización Futura"
+          - "Finalizado"
       creationDate:
         description: "Fecha de creación (YYYY-MM-DD)"
         required: true
