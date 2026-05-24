@@ -76,11 +76,11 @@ jobs:
             technologies: '${{ github.event.inputs.technologies }}'
           };
 
-          if(${{ github.event.inputs.repositoryUrl }} != ''){
+          if('${{ github.event.inputs.repositoryUrl }}' != ''){
             newItem.repoLink = '${{ github.event.inputs.repositoryUrl }}';
           }
 
-          if(${{ github.event.inputs.demoUrl }} != ''){
+          if('${{ github.event.inputs.demoUrl }}' != ''){
             newItem.demoLink = '${{ github.event.inputs.demoUrl }}';
           }
 
