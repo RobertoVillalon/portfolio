@@ -26,6 +26,12 @@ on:
       technologies:
         description: "Tecnologías utilizadas (separadas por comas)"
         required: true
+      repositoryUrl:
+        description: "URL del repositorio (opcional)"
+        required: false
+      demoUrl:
+        description: "URL de la demo (opcional)"
+        required: false
 permissions:
   contents: write
   pull-requests: write
@@ -68,6 +74,8 @@ jobs:
             creationDate: '${{ github.event.inputs.creationDate }}',
             lastUpdateDate: '${{ github.event.inputs.lastUpdateDate }}',
             technologies: '${{ github.event.inputs.technologies }}',
+            repoLink: '${{ github.event.inputs.repositoryUrl }}' ?? null,
+            demoLink: '${{ github.event.inputs.demoUrl }}' ?? null
           };
 
           const objectIndex = data.findIndex(project => project.name === newItem.name)
