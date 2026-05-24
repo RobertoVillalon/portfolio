@@ -73,10 +73,16 @@ jobs:
             status: '${{ github.event.inputs.status }}',
             creationDate: '${{ github.event.inputs.creationDate }}',
             lastUpdateDate: '${{ github.event.inputs.lastUpdateDate }}',
-            technologies: '${{ github.event.inputs.technologies }}',
-            repoLink: '${{ github.event.inputs.repositoryUrl }}' ?? null,
-            demoLink: '${{ github.event.inputs.demoUrl }}' ?? null
+            technologies: '${{ github.event.inputs.technologies }}'
           };
+
+          if(${{ github.event.inputs.repositoryUrl }}){
+            newItem.repoLink = '${{ github.event.inputs.repositoryUrl }}';
+          }
+
+          if(${{ github.event.inputs.demoUrl }}){
+            newItem.demoLink = '${{ github.event.inputs.demoUrl }}';
+          }
 
           const objectIndex = data.findIndex(project => project.name === newItem.name)
 
