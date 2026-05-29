@@ -22,7 +22,7 @@ export class IconService {
 
     if(this.icons() != null) {
       arrayIcon = this.icons()![icon];
-      return `${arrayIcon.class} ${arrayIcon.colorClass}`;
+      return `${arrayIcon.iconClass} ${arrayIcon.colorClass}`;
     }
 
     return "icon-[line-md--question] text-gray-500"; // Default icon if not found

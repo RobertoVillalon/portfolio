@@ -30,7 +30,7 @@ interface ExperienceBody {
 }
 
 interface Icon {
-  class: string;
+  iconClass: string;
   colorClass: string;
 }
 
