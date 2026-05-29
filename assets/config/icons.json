@@ -1,114 +1,114 @@
 {
   "Angular": {
-    "class": "icon-[devicon-plain--angular]",
+    "iconClass": "icon-[devicon-plain--angular]",
     "colorClass": "text-red-600"
   },
   "TypeScript": {
-    "class": "icon-[devicon-plain--typescript]",
+    "iconClass": "icon-[devicon-plain--typescript]",
     "colorClass": "text-blue-600"
   },
   "JavaScript": {
-    "class": "icon-[devicon-plain--javascript]",
+    "iconClass": "icon-[devicon-plain--javascript]",
     "colorClass": "text-yellow-300"
   },
   "HTML": {
-    "class": "icon-[devicon-plain--html5]",
+    "iconClass": "icon-[devicon-plain--html5]",
     "colorClass": "text-orange-600"
   },
   "CSS": {
-    "class": "icon-[devicon-plain--css3]",
+    "iconClass": "icon-[devicon-plain--css3]",
     "colorClass": "text-blue-600"
   },
   "React.js": {
-    "class": "icon-[tabler--brand-react]",
+    "iconClass": "icon-[tabler--brand-react]",
     "colorClass": "text-blue-400"
   },
   "React Router": {
-    "class": "icon-[devicon-plain--reactrouter]",
+    "iconClass": "icon-[devicon-plain--reactrouter]",
     "colorClass": "text-red-500"
   },
   "Leaflet": {
-    "class": "icon-[tabler--map-pin]",
+    "iconClass": "icon-[tabler--map-pin]",
     "colorClass": "text-green-600"
   },
   "OpenStreetMap": {
-    "class": "icon-[tabler--map-pin]",
+    "iconClass": "icon-[tabler--map-pin]",
     "colorClass": "text-blue-600"
   },
   "Node.js": {
-    "class": "icon-[devicon-plain--nodejs]",
+    "iconClass": "icon-[devicon-plain--nodejs]",
     "colorClass": "text-green-600"
   },
   "Java": {
-    "class": "icon-[devicon-plain--java]",
+    "iconClass": "icon-[devicon-plain--java]",
     "colorClass": "text-red-600"
   },
   "Kotlin": {
-    "class": "icon-[devicon-plain--kotlin]",
+    "iconClass": "icon-[devicon-plain--kotlin]",
     "colorClass": "text-purple-600"
   },
   "C": {
-    "class": "icon-[devicon-plain--cplusplus]",
+    "iconClass": "icon-[devicon-plain--cplusplus]",
     "colorClass": "text-blue-600"
   },
   "Spring": {
-    "class": "icon-[devicon-plain--spring]",
+    "iconClass": "icon-[devicon-plain--spring]",
     "colorClass": "text-green-600"
   },
   "Spring Boot": {
-    "class": "icon-[devicon-plain--spring]",
+    "iconClass": "icon-[devicon-plain--spring]",
     "colorClass": "text-green-600"
   },
   "Spring Security": {
-    "class": "icon-[devicon-plain--spring]",
+    "iconClass": "icon-[devicon-plain--spring]",
     "colorClass": "text-green-600"
   },
   "Hibernate": {
-    "class": "icon-[devicon-plain--hibernate]",
+    "iconClass": "icon-[devicon-plain--hibernate]",
     "colorClass": "text-orange-600"
   },
   "JSP": {
-    "class": "icon-[devicon-plain--java]",
+    "iconClass": "icon-[devicon-plain--java]",
     "colorClass": "text-red-600"
   },
   "PostgreSQL": {
-    "class": "icon-[devicon-plain--postgresql]",
+    "iconClass": "icon-[devicon-plain--postgresql]",
     "colorClass": "text-blue-600"
   },
   "MySQL": {
-    "class": "icon-[devicon-plain--mysql]",
+    "iconClass": "icon-[devicon-plain--mysql]",
     "colorClass": "text-blue-600"
   },
   "JWT": {
-    "class": "icon-[devicon-plain--jwt]",
+    "iconClass": "icon-[devicon-plain--jwt]",
     "colorClass": "text-yellow-600"
   },
   "Apache Lucene": {
-    "class": "icon-[devicon-plain--apache]",
+    "iconClass": "icon-[devicon-plain--apache]",
     "colorClass": "text-orange-600"
   },
   "Apache Tika": {
-    "class": "icon-[devicon-plain--apache]",
+    "iconClass": "icon-[devicon-plain--apache]",
     "colorClass": "text-orange-600"
   },
   "Github Actions": {
-    "class": "icon-[devicon-plain--githubactions]",
+    "iconClass": "icon-[devicon-plain--githubactions]",
     "colorClass": "text-orange-600"
   },
   "AWS": {
-    "class": "icon-[devicon-plain--amazonwebservices]",
+    "iconClass": "icon-[devicon-plain--amazonwebservices]",
     "colorClass": "text-orange-500"
   },
   "Docker": {
-    "class": "icon-[devicon-plain--docker]",
+    "iconClass": "icon-[devicon-plain--docker]",
     "colorClass": "text-blue-500"
   },
   "Kubernetes": {
-    "class": "icon-[devicon-plain--kubernetes]",
+    "iconClass": "icon-[devicon-plain--kubernetes]",
     "colorClass": "text-blue-600"
   },
   "Jetpack Compose": {
-    "class": "icon-[devicon-plain--jetpackcompose]",
+    "iconClass": "icon-[devicon-plain--jetpackcompose]",
     "colorClass": "text-purple-600"
   }
 }
