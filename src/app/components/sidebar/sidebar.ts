@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { SidebarService } from '../../service/sidebar/sidebar-service';
-import { SidebarItem } from '../../interfaces';
 import { DarkmodeSwitch } from "../darkmode-switch/darkmode-switch";
 
 @Component({
@@ -10,7 +9,7 @@ import { DarkmodeSwitch } from "../darkmode-switch/darkmode-switch";
 })
 export class Sidebar {
   readonly sidebarService = inject(SidebarService);
-  readonly items: SidebarItem[] = this.sidebarService.items;
+  readonly items = this.sidebarService.getItems();
 
   scrollTo(id: string) {
     const el = document.getElementById(id);

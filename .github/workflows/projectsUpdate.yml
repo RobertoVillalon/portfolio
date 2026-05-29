@@ -101,5 +101,5 @@ jobs:
         with:
           commit-message: "feat: se añade ${{github.event.inputs.name}}"
           branch: "update/projects-${{ github.run_id }}"
-          title: "Se añade ${{github.event.inputs.name}}"
+          title: "Se añade ${{github.event.inputs.name}} a los proyectos"
           body: "Automated update to projects.json"

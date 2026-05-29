@@ -3,7 +3,7 @@
   <!-- Header -->
   <li class="pb-3">
     <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-100">
-      {{ item().name }}
+      {{ item().name}}
     </h2>
     <p class="text-sm text-gray-500 dark:text-neutral-400">
       {{ item().description }}
@@ -67,8 +67,8 @@
                  bg-gray-100 text-gray-700
                  dark:bg-neutral-800 dark:text-neutral-300"
         >
-        <span class="{{tech.icon.name}} {{tech.icon.color}} shrink-0 size-6"></span>
-        {{ tech.name }}
+        <span [className]="iconService.getIconClass(tech) + ' shrink-0 size-6'"></span>
+          {{ tech }}
         </span>
       }
     </div>

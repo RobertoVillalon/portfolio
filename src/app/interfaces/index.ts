@@ -3,10 +3,10 @@ interface Page {
   component: any;
 }
 
-interface SidebarItem {
+interface MenuItem {
   name: string;
   link: string;
-  icon: string;
+  icon: Icon;
 }
 
 interface AboutInfo {
@@ -15,10 +15,10 @@ interface AboutInfo {
   summary: string[];
   email: string;
   linkedin: string;
-  values: {
+  attitudes: {
     title: string;
     description: string;
-    icon: string;
+    icon: Icon;
   }[];
 }
 
@@ -29,14 +29,9 @@ interface ExperienceBody {
   tasks: string[];
 }
 
-interface Technology {
-  name: string;
-  icon: Icon;
-}
-
 interface Icon {
-  name: string;
-  color: string;
+  class: string;
+  colorClass: string;
 }
 
 interface ProjectItem {
@@ -46,7 +41,7 @@ interface ProjectItem {
   creationDate?: string;
   lastUpdateDate?: string;
   images?: string[];
-  technologies: Technology[],
+  technologies: string[],
   repoLink?: string;
   demoLink?: string;
 }
@@ -62,7 +57,7 @@ interface CertificationItem {
   name: string;
   provider: string;
   issueDate: string;
-  icon: Icon
+  icon: Icon;
 }
 
-export type {Page, SidebarItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem};
+export type {Page,Icon, MenuItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem};

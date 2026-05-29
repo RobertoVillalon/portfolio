@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { ProjectItem } from '../../../../interfaces';
+import { IconService } from '../../../../service/icon/icon-service';
 
 @Component({
   selector: 'projectbody',
@@ -8,4 +9,5 @@ import { ProjectItem } from '../../../../interfaces';
 })
 export class Projectbody {
   readonly item = input.required<ProjectItem>();
+  readonly iconService = inject(IconService);
 }

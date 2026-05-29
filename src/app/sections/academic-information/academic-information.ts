@@ -1,5 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { AcademicinformationService } from '../../service/academicinformation/academicinformation-service';
+import { IconService } from '../../service/icon/icon-service';
 
 @Component({
   selector: 'app-academic-information',
@@ -7,6 +8,8 @@ import { AcademicinformationService } from '../../service/academicinformation/ac
 })
 export class AcademicInformation {
   readonly academicinformationService = inject(AcademicinformationService);
+  readonly iconService = inject(IconService);
+
   readonly education = computed(() => {
     const items = this.academicinformationService.education()
 

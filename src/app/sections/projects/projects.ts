@@ -5,6 +5,7 @@ import { SelectorService } from '../../service/selector/selector-service';
 import { ProjectsService } from '../../service/projects/projects-service';
 import { Carousel } from '../../components/carousel/carousel';
 import { Select } from '../../components/select/select';
+import { IconService } from '../../service/icon/icon-service';
 
 @Component({
   selector: 'app-projects',
@@ -14,9 +15,12 @@ import { Select } from '../../components/select/select';
 export class Projects {
   readonly selectorService = inject(SelectorService);
   readonly projectService = inject(ProjectsService)
+  readonly icons = inject(IconService);
+
   readonly tabNames = computed(() =>
     this.projectService.items().map(item => item.name)
   );
+  
   readonly currentItem = computed(() => {
     const items = this.projectService.items();
     const index = this.selectorService.selectedIndex() - 1;

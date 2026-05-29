@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
-import { SidebarItem } from '../../interfaces';
-
-declare const window: any;
+import { inject, Injectable } from '@angular/core';
+import { MenuItem } from '../../interfaces';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SidebarService {
-  readonly items: SidebarItem[] = [
-    { name: 'Acerca de Mi', link: 'aboutme', icon: 'icon-[tabler--user]' },
-    { name: 'Experiencia', link: 'experience', icon: 'icon-[tabler--book]' },
-    { name: 'Proyectos', link: 'projects', icon: 'icon-[tabler--checklist]' },
-    { name: 'Formación', link: 'academicinformation', icon: 'icon-[tabler--certificate]' },
-  ]
+  private readonly http = inject(HttpClient);
+  readonly items = toSignal(this.http.get<MenuItem[]>('assets/config/menuItems.json'))
+
+  public getItems(): MenuItem[] {
+    return this.items() ?? [];
+  }
 }

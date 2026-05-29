@@ -9,21 +9,21 @@
   </div>
 
 
-  @if (!currentItem().images || currentItem().images?.length === 0) {
+  @if(currentItem()){
+    @if (!currentItem().images || currentItem().images?.length === 0) {
+      <div class="lg:col-span-7">
+        <projectbody [item]="currentItem()" />
+      </div>
+    } @else {
 
-    <div class="lg:col-span-7">
-      <projectbody [item]="currentItem()" />
-    </div>
+      <div class="lg:col-span-4">
+        <projectbody [item]="currentItem()" />
+      </div>
 
-  } @else {
+      <div class="lg:col-span-3">
+        <carousel [images]="currentItem().images ?? []" />
+      </div>
 
-    <div class="lg:col-span-4">
-      <projectbody [item]="currentItem()" />
-    </div>
-
-    <div class="lg:col-span-3">
-      <carousel [images]="currentItem().images ?? []" />
-    </div>
-
+    }
   }
 </div>
