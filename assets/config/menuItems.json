@@ -1,0 +1,6 @@
+[
+    { "name": "Acerca de Mi", "link": "aboutme", "icon": "icon-[tabler--user]" },
+    { "name": "Experiencia", "link": "experience", "icon": "icon-[tabler--book]" },
+    { "name": "Proyectos", "link": "projects", "icon": "icon-[tabler--checklist]" },
+    { "name": "Formación", "link": "academicinformation", "icon": "icon-[tabler--certificate]" }
+]
