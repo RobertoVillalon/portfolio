@@ -25,6 +25,6 @@ export class IconService {
       return `${arrayIcon.iconClass} ${arrayIcon.colorClass}`;
     }
 
-    return "icon-[line-md--question] text-gray-500"; // Default icon if not found
+    return "";
   }
 }
