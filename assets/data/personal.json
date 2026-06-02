@@ -1,33 +1,36 @@
 {
-  "name": "Roberto Villalón",
-  "role": "Full Stack Developer · DevOps",
-  "summary": [
-    "Desarrollador de software full stack con más de 3 años de experiencia, enfocado en la construcción de aplicaciones web modernas, escalables y mantenibles.",
-    "Trabajo principalmente con Angular, Spring Boot y arquitecturas basadas en microservicios y cloud.",
-    "Me caracterizo por una mentalidad de mejora continua, automatización de procesos y un fuerte enfoque en la calidad técnica de las soluciones."
+  "cellphone": "+56 9 4869 1049",
+  "city": "La Serena",
+  "country": "Chile",
+  "developmentSkills": [
+    "Java",
+    "Spring Boot",
+    "Hibernate",
+    "Angular",
+    "React.js",
+    "MySQL"
   ],
-  "email": "robertoantonio3756@gmail.com",
-  "linkedin": "https: //www.linkedin.com/in/roberto-villalón",
-  "values": [
-    {
-      "title": "Compromiso",
-      "description": "Responsabilidad y dedicación en cada proyecto, desde la arquitectura hasta el último detalle.",
-      "icon": "icon-[tabler--circle-check]"
-    },
-    {
-      "title": "Calidad técnica",
-      "description": "Código limpio, escalable y alineado a buenas prácticas y estándares profesionales.",
-      "icon": "icon-[tabler--circle-check]"
-    },
-    {
-      "title": "Adaptabilidad",
-      "description": "Capacidad para integrarme rápidamente a distintos equipos, tecnologías y contextos.",
-      "icon": "icon-[tabler--circle-check]"
-    },
-    {
-      "title": "Agilidad",
-      "description": "Experiencia real trabajando con metodologías ágiles y entrega continua de valor.",
-      "icon": "icon-[tabler--circle-check]"
-    }
-  ]
+  "devopsSkills": [
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "Linux",
+    "AWS",
+    "Git",
+    "Redis"
+  ],
+  "links": {
+    "email": "mailto:robertoantonio3756@gmail.com",
+    "github": "https://github.com/RobertoVillalon",
+    "linkedin": "https://www.linkedin.com/in/roberto-villalón"
+  },
+  "name": "Roberto Antonio Villalón Olivos",
+  "role": "Full Stack Developer · DevOps",
+  "softSkills": [
+    "Comunicación efectiva",
+    "Trabajo en equipo",
+    "Resolución de problemas",
+    "Aprendizaje continuo"
+  ],
+  "summary": "Desarrollador de software y consultor DevOps con más de 3 años de experiencia, enfocado en la creación de soluciones a problematicas complejas. A lo largo de todo el ciclo de vida del software, desde la arquitectura hasta la implementación y mantenimiento. Comprometido con la excelencia técnica y la entrega continua de valor, busco constantemente mejorar mis habilidades y participar en proyectos que me hagan crecer profesionalmente."
 }
