@@ -39,7 +39,7 @@ fixed top-0 start-0 bottom-0 z-60 bg-white border-e border-gray-200 dark:bg-neut
                         hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100
                         dark:bg-neutral-800 dark:hover:bg-neutral-700
                         dark:focus:bg-neutral-700 dark:text-neutral-200">
-                  <span class="py-2 px-3" [class]="item.icon"></span>
+                  <span class="py-2 px-3" [class]="iconService.getIconClass(item.icon)"></span>
                   <span class="hs-overlay-minified:hidden">{{ item.name }}</span>
                 </button>
               </li>

@@ -1,8 +1,8 @@
 [
   {
-    "role": "Consultor Devops / Desarrollador",
     "company": "Technology Solutions",
     "period": "Noviembre 2022 - Presente",
+    "role": "Consultor Devops / Desarrollador",
     "tasks": [
       "Generación y mantenimiento de servicios virtualizados",
       "Desarrollo de plataforma de gestión de servicios distribuidos de un middleware",
@@ -11,9 +11,9 @@
     ]
   },
   {
-    "role": "Desarrollador de Software",
     "company": "Renapam",
     "period": "Septiembre 2024 - Enero 2025",
+    "role": "Desarrollador de Software",
     "tasks": [
       "Desarrollo y gestión de sitios web en wordpress, incluyendo personalización de temas y plugins",
       "Análisis de requerimientos y soporte técnico a usuarios finales",

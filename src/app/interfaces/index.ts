@@ -6,20 +6,7 @@ interface Page {
 interface MenuItem {
   name: string;
   link: string;
-  icon: Icon;
-}
-
-interface AboutInfo {
-  name: string;
-  role: string;
-  summary: string[];
-  email: string;
-  linkedin: string;
-  attitudes: {
-    title: string;
-    description: string;
-    icon: Icon;
-  }[];
+  icon: string;
 }
 
 interface ExperienceBody {
@@ -27,6 +14,25 @@ interface ExperienceBody {
   company: string;
   period: string;
   tasks: string[];
+}
+
+interface AboutInfo {
+  cellphone:         string;
+  city:              string;
+  country:           string;
+  developmentSkills: string[];
+  devopsSkills:      string[];
+  links:             Links;
+  name:              string;
+  role:              string;
+  softSkills:        string[];
+  summary:           string;
+}
+
+interface Links {
+  email:    string;
+  github:   string;
+  linkedin: string;
 }
 
 interface Icon {
@@ -57,7 +63,7 @@ interface CertificationItem {
   name: string;
   provider: string;
   issueDate: string;
-  icon: Icon;
+  icon: string;
 }
 
-export type {Page,Icon, MenuItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem};
+export type { Page,Icon, MenuItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem };

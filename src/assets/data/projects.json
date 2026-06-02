@@ -1,10 +1,17 @@
 [
   {
-    "name": "Maps App",
-    "description": "Aplicacion de mapas trabajada con OpenStreetMap que permite interactuar con mapas y marcar ubicaciones",
-    "status": "Finalizado",
     "creationDate": "10-06-2025",
+    "demoLink": "https://robertovillalon.github.io/MapsApp",
+    "description": "Aplicacion de mapas trabajada con OpenStreetMap que permite interactuar con mapas y marcar ubicaciones",
+    "images": [
+      "projects/mapsapp/1.png",
+      "projects/mapsapp/2.png",
+      "projects/mapsapp/3.png"
+    ],
     "lastUpdateDate": "19-08-2025",
+    "name": "Maps App",
+    "repoLink": "https://github.com/RobertoVillalon/MapsApp",
+    "status": "Finalizado",
     "technologies": [
       "Angular",
       "TypeScript",
@@ -12,95 +19,89 @@
       "OpenStreetMap",
       "CSS",
       "Github Actions"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/MapsApp",
-    "demoLink": "https://robertovillalon.github.io/MapsApp",
-    "images": [
-      "projects/mapsapp/1.png",
-      "projects/mapsapp/2.png",
-      "projects/mapsapp/3.png"
     ]
   },
   {
-    "name": "Custom Shop",
-    "description": "Aplicacion tipo e-commerce para la venta de productos personalizados,",
-    "status": "Finalizado",
     "creationDate": "24-08-2025",
+    "demoLink": "https://robertovillalon.github.io/CustomShop",
+    "description": "Aplicacion tipo e-commerce para la venta de productos personalizados,",
     "lastUpdateDate": "14-10-2025",
+    "name": "Custom Shop",
+    "repoLink": "https://github.com/RobertoVillalon/CustomShop",
+    "status": "Finalizado",
     "technologies": [
       "Angular",
       "TypeScript",
       "Github Actions"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/CustomShop",
-    "demoLink": "https://robertovillalon.github.io/CustomShop"
+    ]
   },
   {
-    "name": "Laboratorios de estructura de datos",
-    "description": "Conjunto de laboratorios realizados para la asignatura de Estructura de Datos en la universidad",
-    "status": "Finalizado",
     "creationDate": "05-05-2019",
+    "description": "Conjunto de laboratorios realizados para la asignatura de Estructura de Datos en la universidad",
     "lastUpdateDate": "29-07-2019",
+    "name": "Laboratorios de estructura de datos",
+    "repoLink": "https://github.com/RobertoVillalon/EstructuraDeDatos",
+    "status": "Finalizado",
     "technologies": [
       "C"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/EstructuraDeDatos"
+    ]
   },
   {
-    "name": "Gestion de Citas y Fichas Clinicas",
-    "description": "Proyecto de gestion de citas y fichas clinicas realizado para la asignatura de Programacion Orientada a Objetos",
-    "status": "Finalizado",
     "creationDate": "10-03-2020",
+    "description": "Proyecto de gestion de citas y fichas clinicas realizado para la asignatura de Programacion Orientada a Objetos",
     "lastUpdateDate": "15-04-2020",
+    "name": "Gestion de Citas y Fichas Clinicas",
+    "repoLink": "https://github.com/RobertoVillalon/ProyectoPOO",
+    "status": "Finalizado",
     "technologies": [
       "Java",
       "PostgreSQL"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/ProyectoPOO"
+    ]
   },
   {
-    "name": "Comparacion y Visualizacion de Algoritmos",
-    "description": "Aplicacion para comparar y visualizar el funcionamiento de diferentes algoritmos de ordenamiento y busqueda",
-    "status": "Active",
     "creationDate": "02-06-2020",
+    "description": "Aplicacion para comparar y visualizar el funcionamiento de diferentes algoritmos de ordenamiento y busqueda",
     "lastUpdateDate": "30-06-2020",
+    "name": "Comparacion y Visualizacion de Algoritmos",
+    "repoLink": "https://github.com/RobertoVillalon/Comparacion-Visualizacion-de-Algoritmos",
+    "status": "Active",
     "technologies": [
       "Java"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/Comparacion-Visualizacion-de-Algoritmos"
+    ]
   },
   {
-    "name": "Recuperación de la Información con Lucene",
-    "description": "Software de recuperacion de informacion desde documentos usando Apache Lucene y Apache Tika",
-    "status": "Finalizado",
     "creationDate": "02-07-2020",
+    "description": "Software de recuperacion de informacion desde documentos usando Apache Lucene y Apache Tika",
     "lastUpdateDate": "21-07-2020",
+    "name": "Recuperación de la Información con Lucene",
+    "repoLink": "https://github.com/RobertoVillalon/Lucene",
+    "status": "Finalizado",
     "technologies": [
       "Java",
       "Apache Lucene",
       "Apache Tika"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/Lucene"
+    ]
   },
   {
-    "name": "Tienda de Ropa",
-    "description": "Aplicacion web para la gestion de un tienda de ropa",
-    "status": "Finalizado",
     "creationDate": "28-08-2020",
+    "description": "Aplicacion web para la gestion de un tienda de ropa",
     "lastUpdateDate": "30-09-2020",
+    "name": "Tienda de Ropa",
+    "repoLink": "https://github.com/RobertoVillalon/TiendaDeRopa",
+    "status": "Finalizado",
     "technologies": [
       "HTML",
       "CSS",
       "JavaScript"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/TiendaDeRopa"
+    ]
   },
   {
-    "name": "Poke-Api",
-    "description": "Aplicacion web que consume la Poke-Api",
-    "status": "Finalizado",
     "creationDate": "24-07-2021",
+    "description": "Aplicacion web que consume la Poke-Api",
     "lastUpdateDate": "24-06-2022",
+    "name": "Poke-Api",
+    "repoLink": "https://github.com/RobertoVillalon/PokeAPI",
+    "status": "Finalizado",
     "technologies": [
       "HTML",
       "CSS",
@@ -108,30 +109,30 @@
       "Node.js",
       "React.js",
       "React Router"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/PokeAPI"
+    ]
   },
   {
-    "name": "Aplicacion de Contactos - Frontend",
-    "description": "Aplicacion Web para la gestion de contactos",
-    "status": "Finalizado",
     "creationDate": "26-04-2022",
+    "description": "Aplicacion Web para la gestion de contactos",
     "lastUpdateDate": "01-08-2022",
+    "name": "Aplicacion de Contactos - Frontend",
+    "repoLink": "https://github.com/RobertoVillalon/AppContactosFront",
+    "status": "Finalizado",
     "technologies": [
       "HTML",
       "CSS",
       "JavaScript",
       "React.js",
       "React Router"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/AppContactosFront"
+    ]
   },
   {
-    "name": "Aplicacion de Contactos - Backend",
-    "description": "Backend construido con Spring Boot",
-    "status": "Finalizado",
     "creationDate": "08-05-2022",
+    "description": "Backend construido con Spring Boot",
     "lastUpdateDate": "24-08-2022",
+    "name": "Aplicacion de Contactos - Backend",
+    "repoLink": "https://github.com/RobertoVillalon/AppContactosBack/",
+    "status": "Finalizado",
     "technologies": [
       "Java",
       "Spring",
@@ -140,55 +141,54 @@
       "MySQL",
       "Hibernate",
       "JWT"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/AppContactosBack/"
+    ]
   },
   {
-    "name": "Gestion de Proyectos",
-    "description": "Aplicacion de escritorio para gestion de proyectos",
-    "status": "Finalizado",
     "creationDate": "30-08-2024",
+    "description": "Aplicacion de escritorio para gestion de proyectos",
     "lastUpdateDate": "01-09-2024",
+    "name": "Gestion de Proyectos",
+    "repoLink": "https://github.com/RobertoVillalon/gestionDeProyectos",
+    "status": "Finalizado",
     "technologies": [
       "Java",
       "JSP"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/gestionDeProyectos"
+    ]
   },
   {
-    "name": "Gestion Universitaria",
-    "description": "Sistema de gestion universitaria",
-    "status": "Finalizado",
     "creationDate": "08-09-2024",
+    "description": "Sistema de gestion universitaria",
     "lastUpdateDate": "16-09-2024",
+    "name": "Gestion Universitaria",
+    "repoLink": "https://github.com/RobertoVillalon/gestionUniversitaria",
+    "status": "Finalizado",
     "technologies": [
       "Java",
       "JSP"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/gestionUniversitaria"
+    ]
   },
   {
-    "name": "Aplicacion de Vocabulario",
+    "creationDate": "01-04-2025",
     "description": "Aplicación móvil desarrollada con Kotlin y Jetpack Compose",
-    "status": "Finalizado",
-    "creationDate": "01-04-2025",
     "lastUpdateDate": "12-04-2025",
+    "name": "Aplicacion de Vocabulario",
+    "repoLink": "https://github.com/RobertoVillalon/diccionarioPalabras",
+    "status": "Finalizado",
     "technologies": [
       "Kotlin",
       "Jetpack Compose"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/diccionarioPalabras"
+    ]
   },
   {
-    "name": "SensorApp",
-    "description": "Aplicación Android que visualiza sensores en tiempo real",
-    "status": "Finalizado",
     "creationDate": "01-04-2025",
+    "description": "Aplicación Android que visualiza sensores en tiempo real",
     "lastUpdateDate": "17-04-2025",
+    "name": "SensorApp",
+    "repoLink": "https://github.com/RobertoVillalon/kotlinConSensores",
+    "status": "Finalizado",
     "technologies": [
       "Kotlin",
       "Jetpack Compose"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/kotlinConSensores"
+    ]
   }
 ]
