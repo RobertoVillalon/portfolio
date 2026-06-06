@@ -1,5 +1,4 @@
 import { Component, computed, inject } from '@angular/core';
-import { Card } from "../../components/card/card";
 import { AboutmeService } from '../../service/aboutme/aboutme-service';
 import { IconService } from '../../service/icon/icon-service';
 import { TitleCasePipe } from '@angular/common';

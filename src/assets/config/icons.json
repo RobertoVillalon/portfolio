@@ -1,7 +1,11 @@
 {
-  "Academic Information": {
+  "Formation": {
     "colorClass": "text-gray-800",
     "iconClass": "icon-[tabler--certificate]"
+  },
+  "Certification": {
+    "colorClass": "text-gray-800",
+    "iconClass": "icon-[tabler--certificate-2]"
   },
   "Angular": {
     "colorClass": "text-red-600",

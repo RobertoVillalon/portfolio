@@ -2,7 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { Tabnav } from "../../components/tabnav/tabnav";
 import { Projectbody } from "./components/projectbody/projectbody";
 import { SelectorService } from '../../service/selector/selector-service';
-import { ProjectsService } from '../../service/projects/projects-service';
+import { ProjectService } from '../../service/project/project-service';
 import { Carousel } from '../../components/carousel/carousel';
 import { Select } from '../../components/select/select';
 import { IconService } from '../../service/icon/icon-service';
@@ -14,7 +14,7 @@ import { IconService } from '../../service/icon/icon-service';
 })
 export class Projects {
   readonly selectorService = inject(SelectorService);
-  readonly projectService = inject(ProjectsService)
+  readonly projectService = inject(ProjectService)
   readonly icons = inject(IconService);
 
   readonly tabNames = computed(() =>
