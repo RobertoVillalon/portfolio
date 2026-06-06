@@ -15,8 +15,13 @@
         "name": "Proyectos"
     },
     {
-        "icon": "Academic Information",
-        "link": "academicinformation",
+        "icon": "Formation",
+        "link": "formation",
         "name": "Formación"
+    },
+    {
+        "icon": "Certification",
+        "link": "certifications",
+        "name": "Certificaciones"
     }
 ]
