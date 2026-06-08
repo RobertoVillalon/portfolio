@@ -67,13 +67,15 @@ jobs:
             throw new Error('projects.json debe ser un array');
           }
 
+          const techs = '${{ github.event.inputs.technologies }}'.split(';').map(tech => tech.trim());
+
           const newItem = {
             name: '${{ github.event.inputs.name }}',
             description: '${{ github.event.inputs.description }}',
             status: '${{ github.event.inputs.status }}',
             creationDate: '${{ github.event.inputs.creationDate }}',
             lastUpdateDate: '${{ github.event.inputs.lastUpdateDate }}',
-            technologies: '${{ github.event.inputs.technologies }}'
+            technologies: techs
           };
 
           if('${{ github.event.inputs.repositoryUrl }}' != ''){
