@@ -190,5 +190,19 @@
       "Kotlin",
       "Jetpack Compose"
     ]
+  },
+  {
+    "name": "Portafolio",
+    "description": "Aplicación en la que presento mis habilidades y conocimientos",
+    "status": "Activo",
+    "creationDate": "2025-12-19",
+    "lastUpdateDate": "2026-06-07",
+    "technologies": [
+      "Angular",
+      "Github Actions",
+      "TypeScript"
+    ],
+    "repoLink": "https://github.com/RobertoVillalon/portfolio",
+    "demoLink": "https://robertovillalon.github.io/portfolio"
   }
 ]
