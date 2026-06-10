@@ -56,7 +56,8 @@ jobs:
           const newItem = {
             name: '${{ github.event.inputs.name }}',
             provider: '${{ github.event.inputs.provider }}',
-            icon: { name: '${{ github.event.inputs.iconName }}', color: '${{ github.event.inputs.iconColor }}' },
+            icon: { name: '${{ github.event.inputs.iconName }}', 
+            color: '${{ github.event.inputs.iconColor }}' },
             issueDate: '${{ github.event.inputs.issueDate }}',
           };
 
@@ -77,5 +78,5 @@ jobs:
         with:
           commit-message: "feat: se añade ${{github.event.inputs.name}}"
           branch: "update/certification-${{ github.run_id }}"
-          title: "Nueva certificación: ${{github.event.inputs.name}}"
+          title: "se añade: ${{github.event.inputs.name}}"
           body: "Automated update to certification.json"
