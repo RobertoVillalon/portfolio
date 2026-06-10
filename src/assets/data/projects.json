@@ -1,7 +1,7 @@
 [
   {
     "creationDate": "10-06-2025",
-    "demoLink": "https://robertovillalon.github.io/MapsApp",
+    "demoLink": "https://robertovillalon.github.io/maps-app",
     "description": "Aplicacion de mapas trabajada con OpenStreetMap que permite interactuar con mapas y marcar ubicaciones",
     "images": [
       "projects/mapsapp/1.png",
@@ -10,7 +10,7 @@
     ],
     "lastUpdateDate": "19-08-2025",
     "name": "Maps App",
-    "repoLink": "https://github.com/RobertoVillalon/MapsApp",
+    "repoLink": "https://github.com/RobertoVillalon/maps-app",
     "status": "Finalizado",
     "technologies": [
       "Angular",
@@ -23,11 +23,11 @@
   },
   {
     "creationDate": "24-08-2025",
-    "demoLink": "https://robertovillalon.github.io/CustomShop",
+    "demoLink": "https://robertovillalon.github.io/custom-shop",
     "description": "Aplicacion tipo e-commerce para la venta de productos personalizados,",
     "lastUpdateDate": "14-10-2025",
     "name": "Custom Shop",
-    "repoLink": "https://github.com/RobertoVillalon/CustomShop",
+    "repoLink": "https://github.com/RobertoVillalon/custom-shop",
     "status": "Finalizado",
     "technologies": [
       "Angular",
@@ -192,17 +192,17 @@
     ]
   },
   {
-    "name": "Portafolio",
-    "description": "Aplicación en la que presento mis habilidades y conocimientos",
-    "status": "Activo",
     "creationDate": "2025-12-19",
+    "demoLink": "https://robertovillalon.github.io/portfolio",
+    "description": "Aplicación en la que presento mis habilidades y conocimientos",
     "lastUpdateDate": "2026-06-07",
+    "name": "Portafolio",
+    "repoLink": "https://github.com/RobertoVillalon/portfolio",
+    "status": "Activo",
     "technologies": [
       "Angular",
       "Github Actions",
       "TypeScript"
-    ],
-    "repoLink": "https://github.com/RobertoVillalon/portfolio",
-    "demoLink": "https://robertovillalon.github.io/portfolio"
+    ]
   }
 ]
