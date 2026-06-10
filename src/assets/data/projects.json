@@ -1,25 +1,19 @@
 [
   {
-    "creationDate": "10-06-2025",
-    "demoLink": "https://robertovillalon.github.io/MapsApp",
-    "description": "Aplicacion de mapas trabajada con OpenStreetMap que permite interactuar con mapas y marcar ubicaciones",
-    "images": [
-      "projects/mapsapp/1.png",
-      "projects/mapsapp/2.png",
-      "projects/mapsapp/3.png"
-    ],
-    "lastUpdateDate": "19-08-2025",
     "name": "Maps App",
-    "repoLink": "https://github.com/RobertoVillalon/MapsApp",
+    "description": "Aplicacion trabajada con OpenStreetMap que permite interactuar con mapas y marcar ubicaciones",
     "status": "Finalizado",
+    "creationDate": "10-06-2025",
+    "lastUpdateDate": "19-08-2025",
     "technologies": [
       "Angular",
       "TypeScript",
       "Leaflet",
       "OpenStreetMap",
-      "CSS",
-      "Github Actions"
-    ]
+      "CSS:Github Actions"
+    ],
+    "repoLink": "https://github.com/RobertoVillalon/maps-app",
+    "demoLink": "https://robertovillalon.github.io/maps-app"
   },
   {
     "creationDate": "24-08-2025",
