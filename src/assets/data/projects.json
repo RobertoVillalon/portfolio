@@ -22,20 +22,6 @@
     ]
   },
   {
-    "creationDate": "24-08-2025",
-    "demoLink": "https://robertovillalon.github.io/custom-shop",
-    "description": "Aplicacion tipo e-commerce para la venta de productos personalizados,",
-    "lastUpdateDate": "14-10-2025",
-    "name": "Custom Shop",
-    "repoLink": "https://github.com/RobertoVillalon/custom-shop",
-    "status": "Finalizado",
-    "technologies": [
-      "Angular",
-      "TypeScript",
-      "Github Actions"
-    ]
-  },
-  {
     "creationDate": "05-05-2019",
     "description": "Conjunto de laboratorios realizados para la asignatura de Estructura de Datos en la universidad",
     "lastUpdateDate": "29-07-2019",
