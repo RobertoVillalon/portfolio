@@ -1,0 +1,76 @@
+<ul class="divide-y divide-[#ecf0f1] dark:divide-neutral-700">
+
+  <li class="flex items-center justify-between py-3">
+    <span class="text-sm text-gray-600 dark:text-neutral-300">
+      Nombre del Proyecto
+    </span>
+
+    <span class="text-sm text-gray-800 dark:text-neutral-100">
+      {{ currentProject().name}}
+    </span>
+  </li>
+
+  <!-- Status -->
+  @if (currentProject().status) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Estado
+      </span>
+
+      <span
+        class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
+        [class.bg-green-100]="currentProject().status === 'Activo'"
+        [class.text-green-700]="currentProject().status === 'Activo'"
+        [class.bg-yellow-100]="currentProject().status === 'Actualización Futura'"
+        [class.text-yellow-700]="currentProject().status === 'Actualización Futura'"
+        [class.bg-gray-200]="currentProject().status === 'Finalizado'"
+        [class.text-gray-700]="currentProject().status === 'Finalizado'"
+      >
+        {{ currentProject().status }}
+      </span>
+    </li>
+  }
+
+  <!-- Creation Date -->
+  @if (currentProject().creationDate) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Fecha de creación
+      </span>
+      <span class="text-sm text-gray-800 dark:text-neutral-100">
+        {{ currentProject().creationDate }}
+      </span>
+    </li>
+  }
+
+   @if (currentProject().lastUpdateDate) {
+    <li class="flex items-center justify-between py-3">
+      <span class="text-sm text-gray-600 dark:text-neutral-300">
+        Ultima actualización
+      </span>
+      <span class="text-sm text-gray-800 dark:text-neutral-100">
+        {{ currentProject().lastUpdateDate }}
+      </span>
+    </li>
+  }
+
+  <!-- Technologies -->
+  <li class="py-3">
+    <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
+      Tecnologias utilizadas
+    </span>
+
+    <div class="flex flex-wrap gap-2">
+      @for (tech of currentProject().technologies; track $index; let i = $index) {
+        <span
+          class="inline-flex items-center gap-x-2 px-3 py-1.5 rounded-lg text-sm
+                 bg-gray-100 text-gray-700
+                 dark:bg-neutral-800 dark:text-neutral-300"
+        >
+        <span [className]="iconService.getIconClass(tech) + ' shrink-0 size-6'"></span>
+          {{ tech }}
+        </span>
+      }
+    </div>
+  </li>
+</ul>

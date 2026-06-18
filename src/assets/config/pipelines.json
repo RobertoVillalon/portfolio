@@ -1,0 +1,41 @@
+{
+  "name": "Build & Deploy Angular to Github Pages",
+  "description": "Pipeline that builds the application and publishes it automatically",
+  "trigger": "Pull Request Merge",
+  "requirements inputs": [
+    "Working directory",
+    "Base folder path",
+    "Publish dir",
+    "Environments Keys"
+  ],
+  "tools": [
+    "GitHub Actions",
+    "Node.js",
+    "Angular",
+    "GitHub Pages"
+  ],
+  "stages": [
+    {
+      "name": "Source Control",
+      "tasks": [
+        "Checkout application repository",
+        "Checkout shared infrastructure repository"
+      ]
+    },
+    {
+      "name": "Build",
+      "tasks": [
+        "Install dependencies",
+        "Generate environment configuration",
+        "Compile production build"
+      ]
+    },
+    {
+      "name": "Release",
+      "tasks": [
+        "Prepare static hosting files",
+        "Publish artifacts"
+      ]
+    }
+  ]
+}
