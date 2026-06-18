@@ -2,12 +2,12 @@
   {
     "company": "Technology Solutions",
     "period": "Noviembre 2022 - Presente",
-    "role": "Consultor Devops / Desarrollador",
+    "role": "Consultor Devops",
     "tasks": [
-      "Generación y mantenimiento de servicios virtualizados",
-      "Desarrollo de plataforma de gestión de servicios distribuidos de un middleware",
-      "Desarrollo / migración de plataforma web monolítica para la gestión de los servicios virtualizados para el cliente hacia una basada en microservicios Gestión y resolución de errores",
-      "Gestión y resolución de errores de pipelines en ambientes preproductivos, ambientaciones de procedimientos (creación de tablas sql, subida de aplicaciones en servidores, análisis de vulnerabilidades, etc"
+      "Virtualizacion de servicios bajo suite parasoft (Generacion de endpoints con data y comportamientos ajustados a las necesidades del cliente)",
+      "Desarrollo de plataforma web de exposicion de los servicios virtualizados, con la finalidad de facilitar su adopcion",
+      "Desarrollo de sitio web para exponer servicios virtualizados basados en Oracle Tuxedo",
+      "Soporte y resolucion de problemas de pipelines (CI/CD) y Devsecops hacia celulas, garantizando su continuidad operativa"
     ]
   },
   {
@@ -16,8 +16,8 @@
     "role": "Desarrollador de Software",
     "tasks": [
       "Desarrollo y gestión de sitios web en wordpress, incluyendo personalización de temas y plugins",
-      "Análisis de requerimientos y soporte técnico a usuarios finales",
-      "Implementación de funcionalidades específicas en php según requerimientos de clientes."
+      "Análisis de requerimientos y soporte personalizado y facilitador hacia el cliente",
+      "Implementación de funcionalidades específicas en php según requerimientos"
     ]
   }
 ]

@@ -1,27 +1,35 @@
-[
-    {
-        "icon": "User",
-        "link": "aboutme",
-        "name": "Acerca de Mi"
-    },
-    {
-        "icon": "Experience",
-        "link": "experience",
-        "name": "Experiencia"
-    },
-    {
-        "icon": "Projects",
-        "link": "projects",
-        "name": "Proyectos"
-    },
-    {
-        "icon": "Formation",
-        "link": "formation",
-        "name": "Formación"
-    },
-    {
-        "icon": "Certification",
-        "link": "certifications",
-        "name": "Certificaciones"
-    }
-]
+{
+    "navbarItems": [
+        {
+            "icon": "User",
+            "link": "aboutme",
+            "name": "Acerca de Mi"
+        },
+        {
+            "icon": "Experience",
+            "link": "experience",
+            "name": "Experiencia"
+        },
+        {
+            "icon": "Projects",
+            "link": "projects",
+            "name": "Proyectos"
+        },
+        {
+            "icon": "Formation",
+            "link": "formation",
+            "name": "Formación"
+        },
+        {
+            "icon": "Certification",
+            "link": "certifications",
+            "name": "Certificaciones"
+        }
+    ],
+    "projectMenuItems": [
+        "Resumen",
+        "Contexto y Analisis",
+        "Infraestructura y Pipelines",
+        "Imagenes"
+    ]
+}

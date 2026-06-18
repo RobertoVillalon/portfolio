@@ -4,6 +4,11 @@ interface Page {
 }
 
 interface MenuItem {
+  navbarItems: NavBarItem[];
+  projectMenuItems: string[];
+}
+
+interface NavBarItem {
   name: string;
   link: string;
   icon: string;
@@ -66,4 +71,4 @@ interface CertificationItem {
   icon: string;
 }
 
-export type { Page,Icon, MenuItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem };
+export type { Page,Icon, MenuItem, NavBarItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem };

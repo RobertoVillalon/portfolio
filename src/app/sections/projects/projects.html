@@ -1,29 +1,57 @@
-<div
-  class=" bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm flex flex-col gap-4 lg:grid lg:grid-cols-9 lg:gap-4">
+<div class="grid lg:grid-cols-9 bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm lg:gap-4">
   <div class="lg:block hidden lg:col-span-2 ">
-    <tabnav [items]="tabNames()" />
+    <tabs tabListKey="projects" [isVertical]="true" [items]="projectList()" />
   </div>
   
   <div class="lg:hidden sm:md:block ">
-    <app-select title="Proyectos" [items]="tabNames()"/>
+    <app-select selectorKey="projects" title="Proyectos" [items]="projectList()"/>
   </div>
 
+  <div class="flex flex-col lg:col-span-7">
+    <tabs tabListKey="menuItems" [isVertical]="false" [items]="projectMenuItems()" />
+    <div class="h-full">
+      @switch (selectedContext()) {
+        @case ("Resumen") {
+          <app-summary [currentProject]="selectedProject()" [currentItem]="selectedContext()"/>
+        }
+        @case ("Contexto y Analisis"){
+          <h1>Contexto y Analisis</h1>
+        }
+        @case ("Infraestructura y Pipelines"){
+          <app-infrastructure-and-pipelines />
+        }
+        @case ("Imagenes"){
+          <h1>Imagenes</h1>
+        }
+        @default {
+          <h1>not exist</h1>
+        }
+      }
+    </div>
+    @if (selectedProject().repoLink || selectedProject().demoLink) {
+      <div class="flex p-2 justify-center gap-5">
+        @if (selectedProject().repoLink) {
+          <a
+            [href]="selectedProject().repoLink"
+            target="_blank"
+            class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-gray-900 text-white hover:bg-gray-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200">
+            <i class="icon-[tabler--brand-github] shrink-0 size-5"></i>
+            Repositorio
+          </a>
+        }
 
-  @if(currentItem()){
-    @if (!currentItem().images || currentItem().images?.length === 0) {
-      <div class="lg:col-span-7">
-        <projectbody [item]="currentItem()" />
+        @if (selectedProject().demoLink) {
+          <a
+            [href]="selectedProject().demoLink"
+            target="_blank"
+            class="inline-flex items-center gap-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-500">
+            <i class="icon-[tabler--external-link] shrink-0 size-5"></i>
+            Ir al proyecto
+          </a>
+        }
       </div>
-    } @else {
-
-      <div class="lg:col-span-4">
-        <projectbody [item]="currentItem()" />
-      </div>
-
-      <div class="lg:col-span-3">
-        <carousel [images]="currentItem().images ?? []" />
-      </div>
-
     }
-  }
+
+  </div>
+
 </div>

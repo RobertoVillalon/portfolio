@@ -6,6 +6,7 @@ import { SelectorService } from '../../service/selector/selector-service';
   templateUrl: './select.html',
 })
 export class Select {
+  readonly selectorKey = input.required<string>();
   readonly title = input.required<string>();
   readonly items = input.required<string[]>();
   readonly selectorService = inject(SelectorService)

@@ -4,10 +4,16 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class SelectorService {
-    private readonly _selectedIndex = signal(1);
+    private readonly _selectedIndex = signal(new Map<string, number>());
     readonly selectedIndex = this._selectedIndex.asReadonly();
 
-    setActive(index: number) {
-      this._selectedIndex.set(index);
+    setActive(key: string, index: number) {
+      this._selectedIndex.update(current => {
+        const newMap = new Map(current);
+
+        newMap.set(key, index);
+
+        return newMap;
+      });
     }
 }

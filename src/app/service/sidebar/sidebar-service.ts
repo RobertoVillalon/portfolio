@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { MenuItem } from '../../interfaces';
+import { MenuItem, NavBarItem } from '../../interfaces';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,9 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SidebarService {
   private readonly http = inject(HttpClient);
-  readonly items = toSignal(this.http.get<MenuItem[]>('assets/config/menuItems.json'))
+  readonly items = toSignal(this.http.get<MenuItem>('assets/config/menuItems.json'))
 
-  public getItems(): MenuItem[] {
-    return this.items() ?? [];
+  public getNavbarItems(): NavBarItem[] {
+    return this.items()?.navbarItems ??  [];
   }
 }
