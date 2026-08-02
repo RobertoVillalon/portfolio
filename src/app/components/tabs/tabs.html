@@ -1,16 +1,16 @@
-<div class="max-h-[50vh] border-[#ecf0f1] overflow-x-hidden overflow-y-auto dark:border-neutral-700">
+<div class="border-[#ecf0f1] max-h-[48vh] overflow-x-hidden overflow-y-auto dark:border-neutral-700">
   @if(isVertical()) {
     <nav class="flex lg:flex-col space-y-2 whitespace-pre-line">
       @for (item of items(); track $index) {
         <button
           type="button"
-          (click)="selectorService.setActive(tabListKey(), $index + 1)"
+          (click)="setTab(tabListKey(), $index + 1)"
           role="tab"
-          [attr.aria-selected]="selectorService.selectedIndex().get(tabListKey()) === $index + 1"
+          [attr.aria-selected]="getTab(tabListKey()) === $index + 1"
           class="inline-flex py-1 ps-2 lg:border-s-2 text-sm lg:justify-start lg:text-start justify-center text-center focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
           
-          [class.active-tab]="selectorService.selectedIndex().get(tabListKey())  === $index + 1"
-          [class.inactive-tab]="selectorService.selectedIndex().get(tabListKey()) !== $index + 1"
+          [class.active-tab]="getTab(tabListKey())  === $index + 1"
+          [class.inactive-tab]="getTab(tabListKey()) !== $index + 1"
         >
           {{ item }}
         </button>
@@ -21,13 +21,13 @@
       @for (item of items(); track $index) {
         <button
           type="button"
-          (click)="selectorService.setActive(tabListKey(), $index + 1)"
+          (click)="setTab(tabListKey(), $index + 1)"
           role="tab"
-          [attr.aria-selected]="selectorService.selectedIndex().get(tabListKey()) === $index + 1"
+          [attr.aria-selected]="getTab(tabListKey()) === $index + 1"
           class="inline-flex lg:border-b-2 p-2 text-sm lg:justify-start lg:text-start justify-center text-center focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
           
-          [class.active-tab]="selectorService.selectedIndex().get(tabListKey())  === $index + 1"
-          [class.inactive-tab]="selectorService.selectedIndex().get(tabListKey()) !== $index + 1"
+          [class.active-tab]="getTab(tabListKey())  === $index + 1"
+          [class.inactive-tab]="getTab(tabListKey()) !== $index + 1"
         >
           {{ item }}
         </button>

@@ -1,0 +1,75 @@
+<div class="grid lg:grid-cols-9 bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-xs lg:gap-4">
+  <div class="lg:block hidden lg:col-span-2 ">
+    <tabs tabListKey="pipelines" [isVertical]="true" [items]="pipelineList()" />
+  </div>
+  
+  <div class="lg:hidden sm:md:block ">
+    <app-select selectorKey="pipelines" title="Pipelines" [items]="pipelineList()"/>
+  </div>
+
+  <div class="flex flex-col lg:col-span-7">
+    <ul class="divide-y divide-[#ecf0f1] dark:divide-neutral-700">
+      <li class="flex items-center justify-between py-3">
+        <span class="text-sm text-gray-600 dark:text-neutral-300">
+          Nombre
+        </span>
+
+        <span class="text-sm text-gray-800 dark:text-neutral-100">
+          {{ selectedPipeline().name}}
+        </span>
+      </li>
+            <li class="flex items-center justify-between py-3">
+        <span class="text-sm text-gray-600 dark:text-neutral-300">
+          Descripcion
+        </span>
+
+        <span class="text-sm text-gray-800 dark:text-neutral-100">
+          {{ selectedPipeline().description}}
+        </span>
+      </li>
+      <li class="flex items-center justify-between py-3">
+        <span class="text-sm text-gray-600 dark:text-neutral-300">
+          Trigger
+        </span>
+
+        <span class="text-sm text-gray-800 dark:text-neutral-100">
+          {{ selectedPipeline().trigger}}
+        </span>
+      </li>
+      <li class="flex items-center justify-between py-3">
+        <span class="text-sm text-gray-600 dark:text-neutral-300">
+          Inputs Requeridos
+        </span>
+
+        <span class="text-sm text-gray-800 dark:text-neutral-100">
+          {{ selectedPipeline().requirementsInputs.join(', ')}}
+        </span>
+      </li>
+      <li class="py-3">
+        <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
+          Plataforma Principal
+        </span>
+        <span class="inline-flex items-center gap-x-2 px-3 py-1.5 rounded-lg text-sm 
+                bg-gray-100 text-gray-700dark:bg-neutral-800 dark:text-neutral-300">
+        <span [className]="iconService.getIconClass(selectedPipeline().mainPlattform) + ' shrink-0 size-6'"></span>
+          {{ selectedPipeline().mainPlattform }}
+        </span>
+      </li>
+      <li class="py-3">
+        <span class="block text-sm text-gray-600 dark:text-neutral-300 mb-2">
+          Herramientas utilizadas en el Pipeline
+        </span>
+
+        <div class="flex gap-2">
+          @for (tool of selectedPipeline().tools; track $index; let i = $index) {
+            <span class="inline-flex items-center gap-x-2 px-3 py-1.5 rounded-lg text-sm 
+                    bg-gray-100 text-gray-700 dark:bg-neutral-800 dark:text-neutral-300">
+            <span [className]="iconService.getIconClass(tool) + ' shrink-0 size-6'"></span>
+              {{ tool }}
+            </span>
+          }
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

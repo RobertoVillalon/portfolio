@@ -1,4 +1,4 @@
-<div class="space-y-2 rounded-xl border border-[#ecf0f1] bg-white dark:bg-neutral-900 dark:border-neutral-700">
+<div class="space-y-2 rounded-xl border border-[#ecf0f1] bg-white shadow-xs dark:bg-neutral-900 dark:border-neutral-700">
   @if(aboutInformation()){
     <div class="relative">
       <svg
@@ -122,7 +122,7 @@
         @for(link of linksToArray(); track $index){
 
         <a [href]="link.url" target="_blank"
-          class="inline-flex items-center justify-center size-10 rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white"
+          class="inline-flex items-center justify-center size-10 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white"
         >
           <i [class]="iconService.getIconClass(link.icon | titlecase)"></i>
         </a>

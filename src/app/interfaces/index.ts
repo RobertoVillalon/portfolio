@@ -57,6 +57,21 @@ interface ProjectItem {
   demoLink?: string;
 }
 
+interface PipelineStep {
+  name: string;
+  tasks: string[];
+}
+
+interface PipelineItem {
+  name: string;
+  description: string;
+  trigger: string;
+  requirementsInputs: string[];
+  mainPlattform: string;
+  tools: string[];
+  stages: PipelineStep[];
+}
+
 interface EducationItem {
   institution: string;
   degree: string;
@@ -71,4 +86,4 @@ interface CertificationItem {
   icon: string;
 }
 
-export type { Page,Icon, MenuItem, NavBarItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem };
+export type { Page,Icon, MenuItem, NavBarItem, ExperienceBody, ProjectItem, AboutInfo, EducationItem, CertificationItem, PipelineItem };

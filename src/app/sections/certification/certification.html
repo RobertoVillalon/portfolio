@@ -1,8 +1,6 @@
 <div class="space-y-5">
     @for (cert of certifications(); track $index) {
-    <div
-        class="flex items-center gap-4 p-4 rounded-xl border border-[#ecf0f1] bg-white dark:bg-neutral-900 dark:border-neutral-700"
-    >
+    <div class="flex items-center gap-4 p-4 rounded-xl border border-[#ecf0f1] bg-white shadow-xs dark:bg-neutral-900 dark:border-neutral-700">
     <span [className]="iconService.getIconClass('' + cert.icon) + ' shrink-0 size-6'"></span>
 
         <div class="flex-1">

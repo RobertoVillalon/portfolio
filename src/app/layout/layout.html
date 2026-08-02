@@ -1,18 +1,21 @@
 <div class="flex flex-col bg-[#ecf0f1] dark:bg-neutral-700">
     <sidebar />
-    <container title="Acerca de Mi" id="aboutme">
+    <container type="block" title="Acerca de Mi" id="aboutme">
         <app-about-me />
     </container>
-    <container title="Experiencia" id="experience">
+    <container type="list" title="Experiencia" id="experience">
         <app-experience />
     </container>
-    <container title="Proyectos" id="projects">
+    <container type="block" title="Proyectos" id="projects">
         <app-projects />
     </container>
-    <container title="Formación" id="formation">
+    <container type="block" title="Pipelines" id="pipelines">
+        <app-pipelines />
+    </container>
+    <container type="list" title="Formación" id="formation">
         <app-formation />
     </container>
-    <container title="Certificaciones" id="certifications">
+    <container type="list" title="Certificaciones" id="certifications">
         <app-certification />
     </container>
 </div>

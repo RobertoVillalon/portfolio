@@ -9,9 +9,5 @@ import { ExperienceService } from '../../service/experience/experience-service';
 export class Experience {
   experienceService = inject(ExperienceService)
 
-  experienceData = computed(() => {
-    const items = this.experienceService.items()
-
-    return items ?? null;  
-  })
+  experienceData = computed(() => this.experienceService.items() ?? null)
 }

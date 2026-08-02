@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Deploy Angular to GitHub Pages",
+    "description": "Pipeline reutilizable que compila una aplicación Angular y la publica automáticamente en GitHub Pages.",
+    "trigger": "Merge de Pull Request",
+    "requirementsInputs": [
+      "Working directory",
+      "Base folder path",
+      "Publish dir",
+      "Environments Keys"
+    ],
+    "mainPlattform": "Github Actions",
+    "tools": [
+      "Github",
+      "Node.js",
+      "Angular"
+    ],
+    "stages": [
+      {
+        "name": "Source Control",
+        "tasks": [
+          "Checkout application repository",
+          "Checkout shared infrastructure repository"
+        ]
+      },
+      {
+        "name": "Build",
+        "tasks": [
+          "Install dependencies",
+          "Generate environment configuration",
+          "Compile production build"
+        ]
+      },
+      {
+        "name": "Release",
+        "tasks": [
+          "Prepare static hosting files",
+          "Publish artifacts"
+        ]
+      }
+    ]
+  }
+]

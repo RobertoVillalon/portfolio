@@ -3,9 +3,9 @@ import { ProjectItem } from '../../../../interfaces';
 import { IconService } from '../../../../service/icon/icon-service';
 
 @Component({
-  selector: 'app-summary',
+  selector: 'context-project-component',
   imports: [],
-  templateUrl: './summary.html'
+  templateUrl: './context.html'
 })
 export class Summary {
   readonly currentProject = input.required<ProjectItem>();

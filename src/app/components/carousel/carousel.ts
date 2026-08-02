@@ -1,7 +1,7 @@
 import { Component, input, signal } from '@angular/core';
 
 @Component({
-  selector: 'carousel',
+  selector: 'carousel-component',
   templateUrl: './carousel.html',
 })
 export class Carousel {

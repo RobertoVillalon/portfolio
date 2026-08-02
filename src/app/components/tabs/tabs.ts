@@ -11,4 +11,12 @@ export class Tabs {
   readonly items = input.required<string[]>();
   readonly isVertical = input.required<boolean>();
   readonly selectorService = inject(SelectorService);
+
+  setTab(key: string, index: number){
+    this.selectorService.setActive(key, index);
+  }
+
+  getTab(key: string){
+    return this.selectorService.selectedIndex().get(key);
+  }
 }

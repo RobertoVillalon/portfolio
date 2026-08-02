@@ -16,6 +16,11 @@
             "name": "Proyectos"
         },
         {
+            "icon": "Pipelines",
+            "link": "pipelines",
+            "name": "Pipelines"
+        },
+        {
             "icon": "Formation",
             "link": "formation",
             "name": "Formación"
@@ -27,9 +32,7 @@
         }
     ],
     "projectMenuItems": [
-        "Resumen",
-        "Contexto y Analisis",
-        "Infraestructura y Pipelines",
+        "Contexto",
         "Imagenes"
     ]
 }

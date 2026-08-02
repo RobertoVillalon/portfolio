@@ -6,10 +6,11 @@ import { Experience } from "../sections/experience/experience";
 import { Projects } from "../sections/projects/projects";
 import { Certification } from "../sections/certification/certification";
 import { AcademicInformation } from "../sections/formation/formation";
+import { Pipelines } from "../sections/pipelines/pipelines";
 
 @Component({
   selector: 'layout',
-  imports: [Sidebar, Container, AboutMe, Experience, Projects, Certification, AcademicInformation],
+  imports: [Sidebar, Container, AboutMe, Experience, Projects, Certification, AcademicInformation, Pipelines],
   templateUrl: './layout.html',
 })
 export class Layout {
