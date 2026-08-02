@@ -12,12 +12,11 @@
   ],
   "devopsSkills": [
     "Docker",
-    "Kubernetes",
     "Jenkins",
+    "Github Actions",
     "Linux",
-    "AWS",
     "Git",
-    "Redis"
+    "AWS"
   ],
   "links": {
     "email": "mailto:robertoantonio3756@gmail.com",
@@ -32,5 +31,5 @@
     "Resolución de problemas",
     "Aprendizaje continuo"
   ],
-  "summary": "Desarrollador de software y consultor DevOps con más de 3 años de experiencia, enfocado en la creación de soluciones a problematicas complejas. A lo largo de todo el ciclo de vida del software, desde la arquitectura hasta la implementación y mantenimiento. Comprometido con la excelencia técnica y la entrega continua de valor, busco constantemente mejorar mis habilidades y participar en proyectos que me hagan crecer profesionalmente."
+  "summary": "Consultor especializado en DevOps con más de 3 años de experiencia, aunque con matices de desarrollador, me enfoco en que el trabajo se haga bien y que genere valor para el equipo y/o la finalidad del proyecto. Me gusta aprender nuevas tecnologías y compartir/enseñar mis conocimientos hacia otros. "
 }

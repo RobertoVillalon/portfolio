@@ -1,12 +1,4 @@
 {
-  "Formation": {
-    "colorClass": "text-gray-800",
-    "iconClass": "icon-[tabler--certificate]"
-  },
-  "Certification": {
-    "colorClass": "text-gray-800",
-    "iconClass": "icon-[tabler--certificate-2]"
-  },
   "Angular": {
     "colorClass": "text-red-600",
     "iconClass": "icon-[devicon-plain--angular]"
@@ -27,6 +19,10 @@
     "colorClass": "text-blue-600",
     "iconClass": "icon-[devicon-plain--cplusplus]"
   },
+  "Certification": {
+    "colorClass": "text-gray-800",
+    "iconClass": "icon-[tabler--certificate-2]"
+  },
   "CSS": {
     "colorClass": "text-blue-600",
     "iconClass": "icon-[devicon-plain--css3]"
@@ -42,6 +38,10 @@
   "Experience": {
     "colorClass": "text-gray-800",
     "iconClass": "icon-[tabler--book]"
+  },
+  "Formation": {
+    "colorClass": "text-gray-800",
+    "iconClass": "icon-[tabler--certificate]"
   },
   "Git": {
     "colorClass": "text-red-500",
@@ -118,6 +118,10 @@
   "OpenStreetMap": {
     "colorClass": "text-blue-600",
     "iconClass": "icon-[tabler--map-pin]"
+  },
+  "Pipelines": {
+    "colorClass": "text-gray-800",
+    "iconClass": "icon-[tabler--infinity-2]"
   },
   "PostgreSQL": {
     "colorClass": "text-blue-600",
