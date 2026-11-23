@@ -6,12 +6,9 @@
     "provider": "Amazon Web Services"
   },
   {
+    "icon": "AWS",
+    "issueDate": "23 Noviembre 2026",
     "name": "AWS Solutions Architect – Associate",
-    "provider": "Amazon Web Services",
-    "icon": {
-      "name": "icon-[devicon-plain--amazonwebservices]",
-      "color": "text-orange-600"
-    },
-    "issueDate": "23 Noviembre 2026"
+    "provider": "Amazon Web Services"
   }
 ]
