@@ -4,5 +4,14 @@
     "issueDate": "04 Septiembre 2025",
     "name": "AWS Cloud Practitioner",
     "provider": "Amazon Web Services"
+  },
+  {
+    "name": "AWS Solutions Architect – Associate",
+    "provider": "Amazon Web Services",
+    "icon": {
+      "name": "icon-[devicon-plain--amazonwebservices]",
+      "color": "text-orange-600"
+    },
+    "issueDate": "23 Noviembre 2026"
   }
 ]
